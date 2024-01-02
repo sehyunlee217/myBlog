@@ -18,14 +18,15 @@ export default function Posts() {
         <div className="flex justify-center align-middle mx-20">
             <div id="gridwrapper">
                 {posts.length > 0 && posts.map(post =>
-                (
                     <Post
-                        key={post.id}
+                        key={post._id}
                         title={post.title}
                         image={post.filePath}
                         date={post.date}
-                        summary={post.summary} />
-                ))}
+                        summary={post.summary}
+                        _id={post._id}
+                    />
+                )}
             </div>
         </div>
     );

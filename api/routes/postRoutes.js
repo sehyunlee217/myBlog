@@ -11,4 +11,7 @@ router.route('/')
     .put(postController.updatePost)
     .delete(postController.deletePost);
 
+router.route('/:id')
+    .get(postController.getSinglePost);
+
 module.exports = router;

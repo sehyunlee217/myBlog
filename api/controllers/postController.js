@@ -10,9 +10,19 @@ const getAllPosts = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: "No posts available" });
     }
 
-    console.log(posts);
-
     res.json(posts);
+});
+
+const getSinglePost = asyncHandler(async (req, res) => {
+    const post = await Post.findById(req.params.id).lean();
+
+    if (!post) {
+        return res.status(400).json({ message: "Post doesn't exist" });
+    }
+
+    console.log(post);
+
+    res.json(post);
 });
 
 const createNewPost = asyncHandler(async (req, res) => {
@@ -48,6 +58,7 @@ const updatePost = asyncHandler(async (req, res) => {
 
 const deletePost = asyncHandler(async (req, res) => {
 
+
 });
 
-module.exports = { getAllPosts, createNewPost, updatePost, deletePost };
+module.exports = { getAllPosts, createNewPost, updatePost, deletePost, getSinglePost };

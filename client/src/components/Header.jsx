@@ -23,8 +23,6 @@ export default function Navbar() {
         setUserInfo(null);
     }
 
-    console.log(userInfo);
-
     return (
         <nav id="nav" className="flex justify-between pb-6">
             <div>

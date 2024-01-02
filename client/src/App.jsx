@@ -9,6 +9,7 @@ import CreatePost from './features/posts/CreatePost';
 import Login from './features/auth/Login';
 import Register from './features/auth/Register';
 import { UserContextProvider } from './components/UserContext';
+import PostPage from './components/pages/PostPage';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
 
           <Route path="posts">
             <Route index element={<PostGrid />} />
+            <Route path=":_id" element={<PostPage />}></Route>
           </Route>
 
           <Route path="projects">
