@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { formatISO9075 } from 'date-fns';
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function PostPage() {
 
@@ -27,8 +28,8 @@ export default function PostPage() {
                     <div className="flex gap-4 text-sm">
                         <div className="text-m">Joe Lee</div>
                         <div className="text-m">{formatISO9075(postData.date)}</div>
+                        <Link to={'edit'} ><div className="text-m">Edit</div></Link>
                     </div>
-
                     <div dangerouslySetInnerHTML={{ __html: postData.content }}></div>
                 </div>
             )}

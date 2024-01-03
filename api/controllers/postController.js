@@ -20,8 +20,6 @@ const getSinglePost = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: "Post doesn't exist" });
     }
 
-    console.log(post);
-
     res.json(post);
 });
 
@@ -53,12 +51,47 @@ const createNewPost = asyncHandler(async (req, res) => {
 });
 
 const updatePost = asyncHandler(async (req, res) => {
+    const { title, summary, content } = req.body;
 
+    // confirm data 
+    if (!req.body.title || !req.body.summary || !req.body.content) {
+        return res.status(400).json({ message: "All fields are required!" });
+    }
+
+    const post = await Post.findById(req.params.id).lean();
+
+    if (!post) {
+        return res.status(400).json({ message: 'Post not found' });
+    }
+
+    const filter = { _id: req.params.id };
+    const update = { title, summary, content };
+
+    const newPost = await Post.findOneAndUpdate(filter, update);
+
+    res.status(200).json({ message: 'Post updated' });
 });
 
 const deletePost = asyncHandler(async (req, res) => {
+    // confirm id 
+    if (!req.params.id) {
+        return res.status(400).json({ message: 'No id found for post' });
+    }
 
+    // confirm data
+    const post = await Post.findById(req.params.id).lean();
 
+    if (!post) {
+        return res.status(400).json({ message: 'Post not found' });
+    }
+
+    const replyJSON = post.title;
+
+    console.log(replyJSON);
+
+    const result = await Post.deleteOne({ _id: req.params.id });
+
+    res.json(`Post ${ replyJSON } was deleted`);
 });
 
 module.exports = { getAllPosts, createNewPost, updatePost, deletePost, getSinglePost };

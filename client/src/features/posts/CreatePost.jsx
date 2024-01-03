@@ -28,6 +28,8 @@ export default function CreatePost() {
     const [summary, setSummary] = useState('');
     const [content, setContent] = useState('');
     const [file, setFile] = useState('');
+    // state to redirect to post pages
+    const [postComplete, setpostComplete] = useState('');
 
     async function createNewPost(e) {
         e.preventDefault();
@@ -47,6 +49,12 @@ export default function CreatePost() {
         setSummary('');
         setContent('');
         setFile('');
+
+        setpostComplete(true);
+    }
+
+    if (postComplete) {
+        return <Navigate to={'/posts'} />;
     }
 
     return (
