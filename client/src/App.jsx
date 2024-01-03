@@ -4,13 +4,13 @@ import Public from './components/Public';
 import About from './components/pages/about';
 import PostGrid from './components/pages/PostGrid';
 import Projects from './components/pages/projects';
-import Creative from './components/pages/creative';
 import CreatePost from './features/posts/CreatePost';
 import Login from './features/auth/Login';
 import Register from './features/auth/Register';
 import { UserContextProvider } from './components/UserContext';
 import PostPage from './components/pages/PostPage';
 import PostEdit from './components/pages/PostEdit';
+import Arts from './components/pages/Arts';
 
 function App() {
 
@@ -34,8 +34,8 @@ function App() {
             <Route index element={<Projects />} />
           </Route>
 
-          <Route path="creative">
-            <Route index element={<Creative />} />
+          <Route path="arts">
+            <Route index element={<Arts />} />
           </Route>
 
           <Route path="auth">

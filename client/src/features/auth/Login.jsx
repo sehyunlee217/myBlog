@@ -39,7 +39,7 @@ function Login() {
                     placeholder='username'
                     value={username}
                     onChange={e => setUsername(e.target.value)}></input>
-                <input type='password'
+                <input type='current-password'
                     className='border-2 p-2 rounded-md'
                     placeholder='password'
                     value={password}

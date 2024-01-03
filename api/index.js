@@ -10,8 +10,6 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 
-console.log(__dirname + "/uploads");
-
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads'));
 app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));

@@ -87,8 +87,13 @@ const deletePost = asyncHandler(async (req, res) => {
 
     const replyJSON = post.title;
 
-    console.log(replyJSON);
-
+    // delete image data from fs
+    try {
+        fs.unlinkSync(post.filePath);
+    } catch (err) {
+        console.log(err);
+    }
+    // delete post data from DB
     const result = await Post.deleteOne({ _id: req.params.id });
 
     res.json(`Post ${ replyJSON } was deleted`);

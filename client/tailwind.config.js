@@ -22,11 +22,7 @@ export default {
         korean_yellowgreen: "#16AA52" // traditional yellowgreen / 명록색
       },
       fontFamily: {
-        "noteworthy": ["Noteworthy", "serif"],
-        "main": ["Noto Sans KR", "serif"],
-        "roboto": ["Roboto Condensed", "serif"],
-        "kr_reg": ["Noto Serif KR", "serif"],
-        "crimson": ["Crimson Text", "serif"]
+        "main": ['Inter Tight', 'sans-serif'],
       },
     },
     screens: {

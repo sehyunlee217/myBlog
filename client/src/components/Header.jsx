@@ -39,7 +39,7 @@ export default function Navbar() {
                     <Link to="/projects">projects</Link>
                 </div>
                 <div>
-                    <Link to="/creative">creative</Link>
+                    <Link to="/arts">arts</Link>
                 </div>
                 {
                     userInfo && (
