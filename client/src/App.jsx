@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/layout';
+import Layout from './components/Layout';
 import Public from './components/Public';
 import About from './components/pages/about';
 import PostGrid from './components/pages/PostGrid';
@@ -20,9 +20,9 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Public />} />
 
-          <Route path="about">
+          {/* <Route path="about">
             <Route index element={<About />} />
-          </Route>
+          </Route> */}
 
           <Route path="posts">
             <Route index element={<PostGrid />} />

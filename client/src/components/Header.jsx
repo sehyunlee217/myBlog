@@ -24,19 +24,19 @@ export default function Navbar() {
     }
 
     return (
-        <nav id="nav" className="flex justify-between pb-6">
+        <nav id="nav" className="flex justify-between p-3 font-nunito font-bold">
             <div>
                 <Link to="/">s.h.l</Link>
             </div>
             <div className="flex gap-3">
-                <div>
+                {/* <div>
                     <Link to="/about">about</Link>
+                </div> */}
+                <div>
+                    <Link to="/projects">projects</Link>
                 </div>
                 <div>
                     <Link to="/posts">posts</Link>
-                </div>
-                <div>
-                    <Link to="/projects">projects</Link>
                 </div>
                 <div>
                     <Link to="/arts">arts</Link>
@@ -44,8 +44,8 @@ export default function Navbar() {
                 {
                     userInfo && (
                         <>
-                            <Link to="auth/create">Create new Post</Link>
-                            <Link onClick={logout}>Logout</Link>
+                            <Link to="auth/create">create</Link>
+                            <Link onClick={logout}>logout</Link>
                         </>
                     )
                 }

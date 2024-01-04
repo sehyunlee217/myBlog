@@ -23,6 +23,8 @@ export default {
       },
       fontFamily: {
         "main": ['Inter Tight', 'sans-serif'],
+        "rounded": ['M+PLUS+Rounded+1c', 'sans-serif'],
+        "nunito": ['Nunito', 'sans-serif']
       },
     },
     screens: {

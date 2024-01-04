@@ -4,13 +4,13 @@ import Footer from "./Footer";
 
 const Layout = () => {
     return (
-        <div className="flex flex-col justify-between align-middle h-full pt-4 font-main bg-white">
+        <>
             <Header />
-            <div className="h-full overflow-auto ">
+            <div className="flex font-rounded flex-col items-center h-full pt-4 text-gray-700 bg-white">
                 <Outlet />
             </div>
             <Footer />
-        </div>
+        </>
     );
 };
 

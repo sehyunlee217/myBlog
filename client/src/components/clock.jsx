@@ -13,18 +13,12 @@ function useTime() {
     return time;
 }
 
-export default function Clock({ lang, location }) {
+export default function Clock() {
     const time = useTime();
 
-    if (location === "America/Toronto") {
-        return (
-            <span >{time.tz("America/Toronto").format("h:mm:ss A")}</span>
-        );
-    }
-    else if (location === "Asia/Seoul") {
-        return (
-            <span>{time.tz("Asia/Seoul").format("MMMM Do, h:mm:ss A")}</span>
-        );
-    }
-
+    return (
+        <span >Located in Toronto, Canada at {time.tz("America/Toronto").format("h:mm:ss A")}. Home belongs to Seoul, Korea at {time.tz("Asia/Seoul").format("MMMM Do, h:mm:ss A")}  </span>
+    );
 }
+
+
