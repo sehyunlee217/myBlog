@@ -9,18 +9,27 @@ const connectDB = require("./config/dbConnection");
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
+const verifyJWT = require('./middleware/verifyJWT');
 
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads'));
 app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
-app.use(express.json());
 app.use(cookieParser());
+app.use(express.json());
 
 // Connect to MongoDB
 connectDB();
 
-app.use("/auth", require("./routes/userRoutes"));
-app.use("/post", upload.single('file'), require("./routes/postRoutes"));
+// Public routes for requests (auth not needed)
+app.use("/user", require("./routes/userRoutes"));
+app.use("/post", require("./routes/postRoutes"));
+app.use("/arts", upload.single('file'), require("./routes/artRoutes"));
+
+app.use(verifyJWT); // middleware to verify JWT token for auth routes
+// app.use("/auth/create/post", upload.single('file'), require("./routes/postRoutes"));
+// app.use("/auth/create/arts", upload.single('file'), require("./routes/artRoutes"));
+
+app.use("/auth", require("./routes/authRoutes"));
 
 mongoose.connection.once('open', () => {
     console.log("Connected to MongoDB");

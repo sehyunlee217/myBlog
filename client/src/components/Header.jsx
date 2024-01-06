@@ -9,6 +9,11 @@ export default function Navbar() {
             method: 'GET',
             credentials: "include"
         }).then(res => {
+            if (res.status == 403) {
+                // not logged in so userinfo is still null
+                // forbidden response
+                console.clear();
+            }
             res.json().then(info => {
                 setUserInfo(info);
             });
@@ -24,7 +29,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav id="nav" className="flex justify-between p-3 font-nunito font-bold">
+        <nav id="nav" className="flex justify-between font-nunito font-bold p-4">
             <div>
                 <Link to="/">s.h.l</Link>
             </div>

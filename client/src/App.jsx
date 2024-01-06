@@ -1,16 +1,22 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Public from './components/Public';
-import About from './components/pages/about';
-import PostGrid from './components/pages/PostGrid';
-import Projects from './components/pages/projects';
-import CreatePost from './features/posts/CreatePost';
-import Login from './features/auth/Login';
-import Register from './features/auth/Register';
+
+// Import Displayed Pages
+import Layout from './pages/Layout';
+import PostPage from './pages/PostPage';
+import Projects from './pages/Projects';
+import Public from './pages/Public';
+import Arts from './pages/Arts';
+
+// Import Feature pages
+import Login from './features/auth/auth/Login';
+import Register from './features/auth/auth/Register';
+
+import CreatePost from './features/auth/posts/CreatePost';
+import PostEdit from './features/auth/posts/PostEdit';
+
+// Import Components
 import { UserContextProvider } from './components/UserContext';
-import PostPage from './components/pages/PostPage';
-import PostEdit from './components/pages/PostEdit';
-import Arts from './components/pages/Arts';
+import PostGrid from './components/PostGrid';
 
 function App() {
 

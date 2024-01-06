@@ -24,6 +24,7 @@ const getSinglePost = asyncHandler(async (req, res) => {
 });
 
 const createNewPost = asyncHandler(async (req, res) => {
+
     const { title, summary, content } = req.body;
 
     // confirm data 

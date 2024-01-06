@@ -3,7 +3,7 @@ import Clock from "./clock";
 
 function Footer() {
     return (
-        <div className=" bg-primary_dark text-font_dark flex align-middle justify-center">
+        <div className="bg-primary_dark font-nunito text-font_dark sticky top-full flex justify-center">
             <Clock />
         </div>
     );
