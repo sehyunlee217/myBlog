@@ -24,7 +24,7 @@ const modules = {
     ],
 };
 
-export default function PostEdit() {
+export default function ArtEdit() {
 
     const [title, setTitle] = useState('');
     const [summary, setSummary] = useState('');

@@ -2,21 +2,25 @@ import { Routes, Route } from 'react-router-dom';
 
 // Import Displayed Pages
 import Layout from './pages/Layout';
-import PostPage from './pages/PostPage';
+import PostGrid from './pages/PostGrid';
 import Projects from './pages/Projects';
 import Public from './pages/Public';
-import Arts from './pages/Arts';
+import ArtGrid from './pages/ArtGrid';
 
 // Import Feature pages
 import Login from './features/auth/auth/Login';
 import Register from './features/auth/auth/Register';
 
 import CreatePost from './features/auth/posts/CreatePost';
+import CreateArtPost from './features/auth/arts/CreateArt';
+
 import PostEdit from './features/auth/posts/PostEdit';
+import ArtEdit from './features/auth/arts/ArtEdit';
 
 // Import Components
 import { UserContextProvider } from './components/UserContext';
-import PostGrid from './components/PostGrid';
+import PostPage from './pages/PostPage';
+import ArtPostPage from './pages/ArtPostPage';
 
 function App() {
 
@@ -25,10 +29,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Public />} />
-
-          {/* <Route path="about">
-            <Route index element={<About />} />
-          </Route> */}
 
           <Route path="posts">
             <Route index element={<PostGrid />} />
@@ -41,13 +41,16 @@ function App() {
           </Route>
 
           <Route path="arts">
-            <Route index element={<Arts />} />
+            <Route index element={<ArtGrid />} />
+            <Route path=":_id" element={<ArtPostPage />}></Route>
+            <Route path=":_id/edit" element={<ArtEdit />}></Route>
           </Route>
 
           <Route path="auth">
             <Route index element={<Login />} />
             <Route path="register" element={<Register />} />
-            <Route path="create" element={<CreatePost />} />
+            <Route path="create/post" element={<CreatePost />} />
+            <Route path="create/art" element={<CreateArtPost />} />
           </Route>
 
         </Route>{/*end of public*/}

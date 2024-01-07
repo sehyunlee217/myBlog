@@ -60,7 +60,7 @@ export default function CreatePost() {
 
     return (
         <div className="flex justify-center h-full">
-            <form className="flex flex-col gap-2 w-[80%] border-2 p-4 h-full"
+            <form className="flex flex-col gap-2 w-[70%] border-2 p-4 h-full"
                 onSubmit={createNewPost}
                 encType="multipart/form-data">
                 <input className="border-2 px-2 py-1 text-xl"
@@ -76,7 +76,7 @@ export default function CreatePost() {
                     onChange={e => setSummary(e.target.value)}
                     required
                 ></input>
-                <input className="py-3 text-sm"
+                <input className="py-4 text-sm"
                     type="file"
                     accept=".jpg, .jpeg, .png"
                     onChange={e => setFile(e.target.files)}

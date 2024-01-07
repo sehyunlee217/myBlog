@@ -1,6 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoTailwindCss, BiLogoPython, BiLogoNodejs, BiLogoJava, BiLogoMongodb } from "react-icons/bi";
+import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoTailwindCss, BiLogoPython, BiLogoNodejs, BiLogoJava, BiLogoMongodb, BiLogoGithub, BiLogoLinkedinSquare, BiBookContent } from "react-icons/bi";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaFilePdf } from "react-icons/fa";
+
 import Clock from "../components/clock";
 import Post from "../components/Post";
 import profilePic from "../img/profile.jpeg";
@@ -19,7 +22,7 @@ export default function Home() {
 
     return (
         <div id='public-container' className='flex justify-center'>
-            <div className="flex flex-col max-w-lg w-full gap-5 sm:gap-10 md:gap-20">
+            <div className="flex flex-col max-w-2xl w-full gap-5 sm:gap-10 md:gap-15">
                 <div id="info-wrapper" className="flex flex-col gap-6">
                     <div className="text-3xl font-bold font-nunito"><span className=" text-teal-400">Hi,</span> I'm Joe 👷‍♂️</div>
                     <div className="">
@@ -38,12 +41,44 @@ export default function Home() {
                 </div>
 
                 <div id="project-wrapper">
-                    <div className="text-3xl font-nunito font-extrabold text-teal-400">Projects</div>
+                    <div className="text-2xl sm:text-3xl font-nunito font-extrabold text-teal-400">Projects</div>
+                </div>
+
+                <div id="project-wrapper">
+                    <div className="text-2xl sm:text-3xl font-nunito font-extrabold text-teal-400 pb-2">Contact</div>
+                    <div className="font-nunito flex flex-wrap sm:flex-nowrap">
+                        <div className="w-full">
+                            <img className="w-full rounded-md shadow-xl" src={profilePic}></img>
+                        </div>
+                        <div className="flex w-full flex-row justify-between pt-3 sm:pt-0 sm:flex-col sm:pl-2 sm:justify-between sm:items-start">
+                            <a href="https://github.com/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-teal-500">
+                                <BiLogoGithub size={25} />
+                                <span className="hidden sm:flex">Github</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/joe-lee-0953a215a/" className="flex gap-4 justify-center items-center hover:text-teal-500">
+                                <BiLogoLinkedinSquare size={25} />
+                                <span className="hidden sm:flex">Linked-In</span>
+                            </a>
+                            <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500">
+                                <FaFilePdf size={25} />
+                                <span className="hidden sm:flex">Cover Letter</span>
+                            </a>
+                            <a href="https://read.cv/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-teal-500">
+                                <BiBookContent size={25} />
+                                <span className="hidden sm:flex">read.cv</span>
+                            </a>
+                            <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500" onClick={(e) => { window.location.href = 'mailto:leeseunghyun217@gmail.com'; }}>
+                                <MdOutlineEmail size={25} />
+                                <span className="hidden sm:flex">leeseunghyun217@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div id="skills-wrapper">
-                    <div className="font-extrabold text-3xl font-nunito text-teal-400">Technical Skills</div>
-                    <div className="text-font_dark flex transition ease-in-out delay-300" >
+                    <div className="font-extrabold text-2xl sm:text-3xl font-nunito text-teal-400 pb-2">Technical Skills</div>
+                    <div className="text-font_dark flex justify-between transition ease-in-out delay-300" >
                         <BiLogoJavascript className=" hover:text-korean_umber duration-700" size={50} />
                         <BiLogoPython className=" hover:text-korean_yellow duration-700" size={50} />
                         <BiLogoJava size={50} className=" hover:text-korean_orange duration-700" />
@@ -55,24 +90,10 @@ export default function Home() {
                         <BiLogoMongodb size={50} className=" hover:text-green-400 duration-700" />
                     </div>
                 </div>
-                {/* <div id="contacts-wrapper" className="flex-col text-base sm:text-xl">
-                    <div>
-                        github: <a href="https://github.com/sehyunlee217">/sehyunlee217</a>
-                    </div>
-                    <div>
-                        linked-in: <a href="https://www.linkedin.com/in/joe-lee-0953a215a/">/joelee</a>
-                    </div>
-                    <div>
-                        read-cv: <a href="https://read.cv/sehyunlee217">/seunghyunlee</a>
-                    </div>
-                    <div>
-                        email: <a className="hover:cursor-pointer" onClick={(e) => { window.location.href = 'mailto:leeseunghyun217@gmail.com'; }}>leeseunghyun217@gmail.com</a>
-                    </div>
-                </div> */}
 
                 <div id="post-wrapper" className="flex flex-col justify-center">
-                    <div className="text-3xl font-nunito font-extrabold text-teal-400">Posts</div>
-                    <div className="grid grid-cols-1 max-w-lg w-full">
+                    <div className="text-2xl sm:text-3xl font-nunito font-extrabold text-teal-400 pb-2">Posts</div>
+                    <div className="grid grid-cols-1 max-w-lg w-full pb-20">
                         {posts.length > 0 && posts.slice(0, 3).map(post =>
                             <Post
                                 key={post._id}
@@ -86,11 +107,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="contact-wrapper">
-                    <img className="max-w-[450px] pb-10" src={profilePic}></img>
-                </div>
-
-            </div>
+            </div >
         </div >
     );
 }

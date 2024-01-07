@@ -75,7 +75,7 @@ const createNewUser = asyncHandler(async (req, res) => {
 
 const loginUser = asyncHandler(async (req, res) => {
     // respond with username
-    res.status(201).json(req.username);
+    res.status(201).json("logged in");
 });
 
 const logoutUser = asyncHandler(async (req, res) => {

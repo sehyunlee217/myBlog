@@ -24,7 +24,7 @@ const modules = {
     ],
 };
 
-export default function CreatePost() {
+export default function CreateArtPost() {
     const [title, setTitle] = useState('');
     const [summary, setSummary] = useState('');
     const [content, setContent] = useState('');
@@ -32,36 +32,35 @@ export default function CreatePost() {
     // state to redirect to post pages
     const [postComplete, setpostComplete] = useState('');
 
-    async function createNewPost(e) {
+    async function createNewArtPost(e) {
         e.preventDefault();
         const data = new FormData();
         data.set("title", title);
         data.set("summary", summary);
-        data.set("content", content);
         data.set("file", file[0]);
 
-        const res = await fetch("http://localhost:3500/auth/create/post", {
+        const res = await fetch("http://localhost:3500/auth/create/art", {
             method: 'POST',
             credentials: "include",
             body: data
         });
 
-        // setTitle('');
-        // setSummary('');
-        // setContent('');
-        // setFile('');
+        setTitle('');
+        setSummary('');
+        setContent('');
+        setFile('');
 
         setpostComplete(true);
     }
 
-    // if (postComplete) {
-    //     return <Navigate to={'/posts'} />;
-    // }
+    if (postComplete) {
+        return <Navigate to={'/arts'} />;
+    }
 
     return (
-        <div className="flex justify-center h-full">
-            <form className="flex flex-col gap-2 w-[80%] border-2 p-4 h-full"
-                onSubmit={createNewPost}
+        <div className="flex justify-center">
+            <form className="flex flex-col gap-2 w-[70%] border-2 p-4"
+                onSubmit={createNewArtPost}
                 encType="multipart/form-data">
                 <input className="border-2 px-2 py-1 text-xl"
                     type="title" placeholder="Title"
@@ -82,13 +81,7 @@ export default function CreatePost() {
                     onChange={e => setFile(e.target.files)}
                     required
                 ></input>
-                <ReactQuill
-                    className="flex flex-col h-full overflow-auto"
-                    value={content}
-                    onChange={val => setContent(val)}
-                    modules={modules}
-                    required />
-                <button className="bg-red-300">Post</button>
+                <button className="bg-red-300">Upload Art</button>
             </form>
         </div>
 

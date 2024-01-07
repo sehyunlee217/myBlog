@@ -30,7 +30,7 @@ router.route('post/:id')
 /* art post controller that requires JWT auth */
 
 router.route('/create/art')
-    .post(artController.createNewArtPost);
+    .post(upload.single('file'), artController.createNewArtPost);
 
 router.route('arts/:id/edit')
     .delete(artController.deleteArtPost);

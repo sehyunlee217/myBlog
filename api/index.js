@@ -23,7 +23,7 @@ connectDB();
 // Public routes for requests (auth not needed)
 app.use("/user", require("./routes/userRoutes"));
 app.use("/post", require("./routes/postRoutes"));
-app.use("/arts", upload.single('file'), require("./routes/artRoutes"));
+app.use("/arts", require("./routes/artRoutes"));
 
 app.use(verifyJWT); // middleware to verify JWT token for auth routes
 // app.use("/auth/create/post", upload.single('file'), require("./routes/postRoutes"));
