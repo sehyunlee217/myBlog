@@ -10,7 +10,7 @@ export default function PostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://myblog-api-bj63.onrender.com/post/${ _id }`, {
+        fetch(`http://localhost:3500/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -19,7 +19,7 @@ export default function PostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('https://myblog-api-bj63.onrender.com/auth/login', {
+        fetch('http://localhost:3500/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {
