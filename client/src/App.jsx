@@ -27,7 +27,7 @@ function App() {
   return (
     <UserContextProvider>
       <Routes>
-        <Route path="*" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Public />} />
 
           <Route path="posts">
