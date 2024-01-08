@@ -13,7 +13,7 @@ const verifyJWT = require('./middleware/verifyJWT');
 
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads'));
-app.use(cors({ credentials: true, origin: 'http://107.20.51.100/' }));
+app.use(cors({ credentials: true, origin: 'https://myblog-api-bj63.onrender.com' }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
