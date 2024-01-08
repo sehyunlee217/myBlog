@@ -10,7 +10,7 @@ function Login() {
 
     async function login(e) {
         e.preventDefault();
-        const res = await fetch('http://localhost:3500/user/login', {
+        const res = await fetch('https://myblog-api-bj63.onrender.com/user/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },

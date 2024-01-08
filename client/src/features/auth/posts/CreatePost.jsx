@@ -40,7 +40,7 @@ export default function CreatePost() {
         data.set("content", content);
         data.set("file", file[0]);
 
-        const res = await fetch("http://localhost:3500/auth/create/post", {
+        const res = await fetch("https://myblog-api-bj63.onrender.com/auth/create/post", {
             method: 'POST',
             credentials: "include",
             body: data

@@ -35,7 +35,7 @@ export default function ArtEdit() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3500/arts/${ _id }`, {
+        fetch(`https://myblog-api-bj63.onrender.com/arts/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -56,7 +56,7 @@ export default function ArtEdit() {
         data.set("summary", summary);
         data.set("file", file[0]);
 
-        const res = await fetch(`http://localhost:3500/auth/arts/${ _id }`, {
+        const res = await fetch(`https://myblog-api-bj63.onrender.com/auth/arts/${ _id }`, {
             method: 'PUT',
             credentials: "include",
             body: data
@@ -74,7 +74,7 @@ export default function ArtEdit() {
         e.preventDefault();
         const data = new FormData();
 
-        const res = await fetch(`http://localhost:3500/auth/arts/${ _id }`, {
+        const res = await fetch(`https://myblog-api-bj63.onrender.com/auth/arts/${ _id }`, {
             method: 'DELETE',
             credentials: "include",
             body: data

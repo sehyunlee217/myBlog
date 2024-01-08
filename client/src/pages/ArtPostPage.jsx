@@ -11,7 +11,7 @@ export default function ArtPostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3500/arts/${ _id }`, {
+        fetch(`https://myblog-api-bj63.onrender.com/arts/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -20,7 +20,7 @@ export default function ArtPostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:3500/auth/login', {
+        fetch('https://myblog-api-bj63.onrender.com/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {
@@ -42,7 +42,7 @@ export default function ArtPostPage() {
             {artpostData && (
                 <div className="flex justify-center items-center font-nunito h-full">
                     <div className="flex flex-col max-w-4xl">
-                        <img className=" max-h-[700px]" src={'http://localhost:3500/' + artpostData.filePath} />
+                        <img className=" max-h-[700px]" src={'https://myblog-api-bj63.onrender.com/' + artpostData.filePath} />
                         <div className="flex flex-col justify-center items-center py-4">
                             <div className="text-xl font-bold">{artpostData.title}</div>
                             <div>{artpostData.summary}</div>

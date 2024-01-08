@@ -10,7 +10,7 @@ export default function PostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3500/post/${ _id }`, {
+        fetch(`https://myblog-api-bj63.onrender.com/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -19,7 +19,7 @@ export default function PostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:3500/auth/login', {
+        fetch('https://myblog-api-bj63.onrender.com/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {
@@ -40,7 +40,7 @@ export default function PostPage() {
         <div className="flex items-center justify-center">
             {postData && (
                 <div>
-                    <img className=" h-96" src={'http://localhost:3500/' + postData.filePath} />
+                    <img className=" h-96" src={'https://myblog-api-bj63.onrender.com/' + postData.filePath} />
                     <div className="flex justify-between items-center font-nunito">
                         <div className="text-4xl pt-3">{postData.title}</div>
                         {userInfo && (
