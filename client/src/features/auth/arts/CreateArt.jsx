@@ -39,7 +39,7 @@ export default function CreateArtPost() {
         data.set("summary", summary);
         data.set("file", file[0]);
 
-        const res = await fetch("https://myblog-api-bj63.onrender.com/auth/create/art", {
+        const res = await fetch("http://localhost:3500/auth/create/art", {
             method: 'POST',
             credentials: "include",
             body: data

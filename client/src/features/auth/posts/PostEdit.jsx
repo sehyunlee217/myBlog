@@ -36,7 +36,7 @@ export default function PostEdit() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://myblog-api-bj63.onrender.com/post/${ _id }`, {
+        fetch(`http://localhost:3500/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -58,7 +58,7 @@ export default function PostEdit() {
         data.set("summary", summary);
         data.set("content", content);
 
-        const res = await fetch(`https://myblog-api-bj63.onrender.com/auth/post/${ _id }`, {
+        const res = await fetch(`http://localhost:3500/auth/post/${ _id }`, {
             method: 'PUT',
             credentials: "include",
             body: data
@@ -76,7 +76,7 @@ export default function PostEdit() {
         e.preventDefault();
         const data = new FormData();
 
-        const res = await fetch(`https://myblog-api-bj63.onrender.com/auth/post/${ _id }`, {
+        const res = await fetch(`http://localhost:3500/auth/post/${ _id }`, {
             method: 'DELETE',
             credentials: "include",
             body: data

@@ -11,7 +11,7 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://myblog-api-bj63.onrender.com/post', {
+        fetch('http://localhost:3500/post', {
             method: 'GET',
             credentials: "include"
         }).then(
