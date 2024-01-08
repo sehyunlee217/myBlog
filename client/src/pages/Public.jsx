@@ -12,7 +12,7 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://myblog-api-bj63.onrender.com/post', {
+        fetch('https://shyun.dev/post', {
             method: 'GET',
             credentials: "include"
         }).then(

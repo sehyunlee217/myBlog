@@ -6,7 +6,7 @@ function Register() {
 
     async function register(e) {
         e.preventDefault();
-        await fetch('http://localhost:3500/auth/register', {
+        await fetch('https://shyun.dev/register', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },

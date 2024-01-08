@@ -35,7 +35,7 @@ export default function ArtEdit() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3500/arts/${ _id }`, {
+        fetch(`https://shyun.dev/arts/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(

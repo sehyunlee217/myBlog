@@ -11,7 +11,7 @@ export default function ArtPostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3500/arts/${ _id }`, {
+        fetch(`https://shyun.dev/arts/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -20,7 +20,7 @@ export default function ArtPostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:3500/auth/login', {
+        fetch('https://shyun.dev/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {

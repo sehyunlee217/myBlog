@@ -10,7 +10,7 @@ export default function PostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3500/post/${ _id }`, {
+        fetch(`https://shyun.dev/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -19,7 +19,7 @@ export default function PostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:3500/auth/login', {
+        fetch('https://shyun.dev/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {

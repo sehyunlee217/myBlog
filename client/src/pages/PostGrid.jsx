@@ -5,7 +5,7 @@ export default function Posts() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3500/post', {
+        fetch('https://shyun.dev/post', {
             method: 'GET',
             credentials: "include"
         }).then(

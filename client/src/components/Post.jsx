@@ -5,7 +5,7 @@ function Post({ title, image, date, summary, _id }) {
 
     return (
         <Link to={`/posts/${ _id }`} className="flex flex-col justify-between">
-            <img className="object-cover h-20 rounded-lg hover:opacity-80" src={'http://localhost:3500/' + image} />
+            <img className="object-cover h-20 rounded-lg hover:opacity-80" src={'https://shyun.dev/' + image} />
             <div className="flex flex-col gap-1">
                 <div className='flex justify-between align-middle'>
                     <div className="text-2xl font-semibold">{title}</div>
