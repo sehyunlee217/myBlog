@@ -7,7 +7,7 @@ export default function Navbar() {
     const [createBtn, setCreateBtn] = useState(false);
 
     useEffect(() => {
-        fetch('https://shyun.dev/auth/login', {
+        fetch('https://myblog-api-bj63.onrender.com/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {
@@ -25,7 +25,7 @@ export default function Navbar() {
     }, []);
 
     function logout() {
-        fetch('https://shyun.dev/auth/logout', {
+        fetch('https://myblog-api-bj63.onrender.com/auth/logout', {
             method: 'POST',
             credentials: "include"
         });

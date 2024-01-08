@@ -10,7 +10,7 @@ export default function PostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://shyun.dev/post/${ _id }`, {
+        fetch(`https://myblog-api-bj63.onrender.com/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -19,7 +19,7 @@ export default function PostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('https://shyun.dev/auth/login', {
+        fetch('https://myblog-api-bj63.onrender.com/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {

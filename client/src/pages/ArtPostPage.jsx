@@ -11,7 +11,7 @@ export default function ArtPostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://shyun.dev/arts/${ _id }`, {
+        fetch(`https://myblog-api-bj63.onrender.com/arts/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -20,7 +20,7 @@ export default function ArtPostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('https://shyun.dev/auth/login', {
+        fetch('https://myblog-api-bj63.onrender.com/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {
