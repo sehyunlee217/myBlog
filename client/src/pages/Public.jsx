@@ -12,7 +12,7 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('http://107.20.51.100/post', {
+        fetch('http://107.20.26.160/post', {
             method: 'GET',
             credentials: "include"
         }).then(
