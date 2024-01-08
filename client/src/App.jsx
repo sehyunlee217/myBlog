@@ -21,7 +21,7 @@ import ArtEdit from './features/auth/arts/ArtEdit';
 import { UserContextProvider } from './components/UserContext';
 import PostPage from './pages/PostPage';
 import ArtPostPage from './pages/ArtPostPage';
-import ErrorPage from './pages/ErrorPage';
+import Testing from './pages/Testing';
 
 function App() {
 
@@ -30,6 +30,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Public />} />
+
+          <Route path="test">
+            <Route index element={<Testing />} />
+          </Route>
 
           <Route path="posts">
             <Route index element={<PostGrid />} />

@@ -26,5 +26,8 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "API for myBlog"
+  "description": "API for myBlog",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
 }

@@ -4,7 +4,6 @@ import { BiLogoReact, BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoTailwindC
 import { MdOutlineEmail } from "react-icons/md";
 import { FaFilePdf } from "react-icons/fa";
 
-import Clock from "../components/clock";
 import Post from "../components/Post";
 import profilePic from "../img/profile.jpeg";
 
