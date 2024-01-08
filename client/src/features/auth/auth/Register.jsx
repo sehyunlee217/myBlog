@@ -15,7 +15,7 @@ function Register() {
     }
 
     return (
-        <div className='flex justify-center my-36 mx-40'>
+        <div className='flex flex-col justify-center my-36 mx-40'>
             <form className='flex flex-col gap-2 align-middle p-8 border-2 rounded-md w-full' onSubmit={register}>
                 <input type='text'
                     className='border-2 p-2 rounded-md'
@@ -28,6 +28,7 @@ function Register() {
                     value={password}
                     onChange={e => setPassword(e.target.value)} />
                 <button className='border-2 p-2 rounded-md bg-orange-200 hover:bg-orange-400'>Register</button>
+                <div className='flex justify-center items-center'>*Only existing users can register new users</div>
             </form>
         </div>
     );

@@ -46,7 +46,7 @@ function Login() {
                     value={password}
                     onChange={e => setPassword(e.target.value)}></input>
                 <button className='border-2 p-2 rounded-md bg-primary bg-opacity-30 hover:bg-opacity-70 hover:text-white'>Login</button>
-                <div className='flex justify-center text-sm underline'><Link to="/auth/register">Register</Link></div>
+                {/* <div className='flex justify-center text-sm underline'><Link to="/auth/register">Register</Link></div> */}
             </form>
         </div>
     );

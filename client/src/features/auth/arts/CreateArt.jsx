@@ -73,7 +73,6 @@ export default function CreateArtPost() {
                     placeholder="Summary"
                     value={summary}
                     onChange={e => setSummary(e.target.value)}
-                    required
                 ></input>
                 <input className="py-3 text-sm"
                     type="file"

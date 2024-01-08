@@ -12,14 +12,12 @@
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.3",
     "mongoose-sequence": "^6.0.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "pdfreader": "^3.0.2"
   },
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {
-    "nodemon": "^3.0.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "index.js",
@@ -27,5 +25,5 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "API for myBlog"
 }

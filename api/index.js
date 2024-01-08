@@ -16,6 +16,7 @@ app.use('/uploads', express.static('uploads'));
 app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
 app.use(cookieParser());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB
 connectDB();
@@ -26,8 +27,6 @@ app.use("/post", require("./routes/postRoutes"));
 app.use("/arts", require("./routes/artRoutes"));
 
 app.use(verifyJWT); // middleware to verify JWT token for auth routes
-// app.use("/auth/create/post", upload.single('file'), require("./routes/postRoutes"));
-// app.use("/auth/create/arts", upload.single('file'), require("./routes/artRoutes"));
 
 app.use("/auth", require("./routes/authRoutes"));
 

@@ -74,8 +74,8 @@ export default function ArtEdit() {
         e.preventDefault();
         const data = new FormData();
 
-        const res = await fetch(`http://localhost:3500/arts/post/${ _id }`, {
-            method: 'Delete',
+        const res = await fetch(`http://localhost:3500/auth/arts/${ _id }`, {
+            method: 'DELETE',
             credentials: "include",
             body: data
         });
@@ -89,7 +89,7 @@ export default function ArtEdit() {
     }
 
     if (editComplete) {
-        return <Navigate to={'/posts'} />;
+        return <Navigate to={'/arts'} />;
     }
 
     return (
@@ -108,14 +108,7 @@ export default function ArtEdit() {
                     placeholder="Summary"
                     value={summary}
                     onChange={e => setSummary(e.target.value)}
-                    required
                 ></input>
-                <ReactQuill
-                    className="flex flex-col h-full overflow-auto"
-                    value={content}
-                    onChange={val => setContent(val)}
-                    modules={modules}
-                    required />
                 <button className="bg-green-300">Update</button>
                 <button className="bg-red-300" onClick={deletePost}>Delete</button>
             </form>

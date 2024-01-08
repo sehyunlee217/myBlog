@@ -21,6 +21,7 @@ import ArtEdit from './features/auth/arts/ArtEdit';
 import { UserContextProvider } from './components/UserContext';
 import PostPage from './pages/PostPage';
 import ArtPostPage from './pages/ArtPostPage';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
 

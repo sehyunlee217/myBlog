@@ -7,7 +7,6 @@ import { UserContext } from "../components/UserContext";
 export default function ArtPostPage() {
     const { userInfo, setUserInfo } = useContext(UserContext);
 
-
     const [artpostData, setArtPostData] = useState('');
     const { _id } = useParams();
 
@@ -41,19 +40,18 @@ export default function ArtPostPage() {
     return (
         <>
             {artpostData && (
-                <div className="flex justify-center font-nunito">
-                    <div className="flex flex-col max-w-3xl">
-                        <img className="" src={'http://localhost:3500/' + artpostData.filePath} />
-                        <div className="flex justify-between items-center">
-                            <div>{artpostData.title}</div>
+                <div className="flex justify-center items-center font-nunito h-full">
+                    <div className="flex flex-col max-w-4xl">
+                        <img className=" max-h-[700px]" src={'http://localhost:3500/' + artpostData.filePath} />
+                        <div className="flex flex-col justify-center items-center py-4">
+                            <div className="text-xl font-bold">{artpostData.title}</div>
                             <div>{artpostData.summary}</div>
-                        </div>
-
-                        <div className="flex gap-4 text-sm">
-                            <div className="text-m">{format(new Date(artpostData.createdAt), "MMM do. yyyy")}</div>
-                            {userInfo && (
-                                <Link to={'edit'} ><div className="text-m">Edit</div></Link>
-                            )}
+                            <div>{format(new Date(artpostData.createdAt), "MMM do. yyyy")}</div>
+                            <div className="flex text-sm">
+                                {userInfo && (
+                                    <Link to={'edit'} ><div>Edit</div></Link>
+                                )}
+                            </div>
                         </div>
                     </div>
 

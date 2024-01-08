@@ -6,8 +6,6 @@ export default function Navbar() {
     const { userInfo, setUserInfo } = useContext(UserContext);
     const [createBtn, setCreateBtn] = useState(false);
 
-    console.log(window.location.pathname);
-
     useEffect(() => {
         fetch('http://localhost:3500/auth/login', {
             method: 'GET',
@@ -41,8 +39,8 @@ export default function Navbar() {
 
     return (
         <nav id="nav" className="flex justify-between text-gray-400  font-nunito font-bold p-4">
-            <div className="hover:text-orange-400">
-                <Link to="/">s.h.l</Link>
+            <div className=" text-teal-400 hover:text-orange-400 font-korean text-4xl">
+                <Link to="/">죠</Link>
             </div>
             <div className="flex gap-3 ">
                 <div className="hover:text-gray-800">
@@ -56,8 +54,8 @@ export default function Navbar() {
                 </div>
                 {
                     userInfo && (
-                        <div className="flex gap-3 hover:text-gray-800">
-                            <div onClick={toggleBtn}>
+                        <div className="flex gap-3">
+                            <div onClick={toggleBtn} className="hover:text-gray-800">
                                 <Link>create</Link>
                                 {
                                     createBtn && (
@@ -68,7 +66,7 @@ export default function Navbar() {
                                     )
                                 }
                             </div>
-                            <Link onClick={logout}>logout</Link>
+                            <Link className="hover:text-red-800" onClick={logout}>logout</Link>
                         </div>
                     )
                 }

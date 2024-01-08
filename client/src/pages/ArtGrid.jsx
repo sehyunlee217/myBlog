@@ -16,7 +16,7 @@ export default function ArtGrid() {
     return (
         <div className="flex justify-center">
             <div className="grid sm:grid-cols-1 sm:max-w-lg md:grid-cols-3 md:max-w-3xl w-full grid-flow-dense pb-10 ">
-                {artposts.length > 0 && artposts.map(artpost =>
+                {artposts.length > 0 && artposts.sort((prev, cur) => new Date(prev.date).getTime() - new Date(cur.date).getTime()).map(artpost =>
                     <ArtPost
                         key={artpost._id}
                         title={artpost.title}

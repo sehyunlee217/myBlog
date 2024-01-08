@@ -23,8 +23,8 @@ router.route('/logout') // route to logout user at Header.jsx
 router.route('/create/post')
     .post(upload.single('file'), postController.createNewPost);
 
-router.route('post/:id')
-    .put(postController.updatePost)
+router.route('/post/:id')
+    .put(upload.single('file'), postController.updatePost)
     .delete(postController.deletePost);
 
 /* art post controller that requires JWT auth */
@@ -32,7 +32,8 @@ router.route('post/:id')
 router.route('/create/art')
     .post(upload.single('file'), artController.createNewArtPost);
 
-router.route('arts/:id/edit')
+router.route('/arts/:id')
+    .put(upload.single('file'), artController.updateArtPost)
     .delete(artController.deleteArtPost);
 
 module.exports = router;

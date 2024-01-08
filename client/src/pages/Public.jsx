@@ -59,13 +59,13 @@ export default function Home() {
                                 <BiLogoLinkedinSquare size={25} />
                                 <span className="hidden sm:flex">Linked-In</span>
                             </a>
-                            <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500">
-                                <FaFilePdf size={25} />
-                                <span className="hidden sm:flex">Cover Letter</span>
-                            </a>
                             <a href="https://read.cv/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-teal-500">
                                 <BiBookContent size={25} />
                                 <span className="hidden sm:flex">read.cv</span>
+                            </a>
+                            <a href="./directory/yourfile.pdf" download="SeunghyunLee_Resume" className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500">
+                                <FaFilePdf size={25} />
+                                <span className="hidden sm:flex">Cover Letter</span>
                             </a>
                             <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500" onClick={(e) => { window.location.href = 'mailto:leeseunghyun217@gmail.com'; }}>
                                 <MdOutlineEmail size={25} />
@@ -93,7 +93,7 @@ export default function Home() {
 
                 <div id="post-wrapper" className="flex flex-col justify-center">
                     <div className="text-2xl sm:text-3xl font-nunito font-extrabold text-teal-400 pb-2">Posts</div>
-                    <div className="grid grid-cols-1 max-w-lg w-full pb-20">
+                    <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
                         {posts.length > 0 && posts.slice(0, 3).map(post =>
                             <Post
                                 key={post._id}

@@ -33,8 +33,8 @@ const createNewArtPost = asyncHandler(async (req, res) => {
     const { title, summary } = req.body;
 
     // confirm data 
-    if (!req.body.title || !req.body.summary) {
-        return res.status(400).json({ message: "All fields are required!" });
+    if (!req.body.title) {
+        return res.status(400).json({ message: "Title is required!" });
     }
 
     // save image file
@@ -56,6 +56,28 @@ const createNewArtPost = asyncHandler(async (req, res) => {
 
 });
 
+const updateArtPost = asyncHandler(async (req, res) => {
+    const { title, summary } = req.body;
+
+    // confirm data 
+    if (!req.body.title) {
+        return res.status(400).json({ message: "All fields are required!" });
+    }
+
+    const artpost = await ArtPost.findById(req.params.id).lean();
+
+    if (!artpost) {
+        return res.status(400).json({ message: 'Art Post not found' });
+    }
+
+    const filter = { _id: req.params.id };
+    const update = { title, summary };
+
+    const newArtPost = await ArtPost.findOneAndUpdate(filter, update);
+
+    res.status(200).json({ message: 'Art Post updated' });
+});
+
 const deleteArtPost = asyncHandler(async (req, res) => {
     // confirm artpost id
     if (!req.params.id) {
@@ -69,7 +91,7 @@ const deleteArtPost = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'Art post not found' });
     }
 
-    const replyJSON = post.title;
+    const replyJSON = artpost.title;
 
     // delete image data from fs
     try {
@@ -77,10 +99,10 @@ const deleteArtPost = asyncHandler(async (req, res) => {
     } catch (err) {
         console.log(err);
     }
-    // delete post data from DB
+    // delete art post data from DB
     const result = await ArtPost.deleteOne({ _id: req.params.id });
 
     res.json(`Post ${ replyJSON } was deleted`);
 });
 
-module.exports = { getAllArtPosts, getSingleArtPost, createNewArtPost, deleteArtPost };
+module.exports = { getAllArtPosts, getSingleArtPost, createNewArtPost, updateArtPost, deleteArtPost };

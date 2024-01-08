@@ -57,7 +57,6 @@ export default function PostEdit() {
         data.set("title", title);
         data.set("summary", summary);
         data.set("content", content);
-        data.set("file", file[0]);
 
         const res = await fetch(`http://localhost:3500/auth/post/${ _id }`, {
             method: 'PUT',
@@ -67,7 +66,6 @@ export default function PostEdit() {
 
         // dump all previous data when submitted
         setTitle('');
-        setFile(null);
         setSummary('');
         setContent('');
 
@@ -79,14 +77,13 @@ export default function PostEdit() {
         const data = new FormData();
 
         const res = await fetch(`http://localhost:3500/auth/post/${ _id }`, {
-            method: 'Delete',
+            method: 'DELETE',
             credentials: "include",
             body: data
         });
 
         // dump all previous data when submitted
         setTitle('');
-        setFile(null);
         setSummary('');
         setContent('');
 
