@@ -31,10 +31,6 @@ function App() {
         <Route path="*" element={<Layout />}>
           <Route index element={<Public />} />
 
-          <Route path="test">
-            <Route index element={<Testing />} />
-          </Route>
-
           <Route path="posts">
             <Route index element={<PostGrid />} />
             <Route path=":_id" element={<PostPage />}></Route>
