@@ -8,7 +8,7 @@ function ArtPost({ title, image, date, summary, _id, num }) {
             <div className="flex flex-col justify-between self-center ">
                 <div className="">
                     <div className="overflow-hidden">
-                        <img className="object-cover hover:opacity-80 md:max-h-[365px] max-h-[700px] hover:scale-110 duration-500 transition-transform" src={'http://localhost:3500/' + image} />
+                        <img className="object-cover hover:opacity-80 md:max-h-[365px] max-h-[700px] hover:scale-110 duration-500 transition-transform" src={'https://myblog-api-bj63.onrender.com/' + image} />
                     </div>
                     <div className="flex flex-col">
                         <div className='flex justify-between items-start gap-2 pt-2'>
