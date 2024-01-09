@@ -32,7 +32,7 @@ const getUser = asyncHandler(async (req, res) => {
             { expiresIn: '3d' }
         );
 
-        res.cookie('jwt', token, { httpOnly: true, secure: true, domain: 'https://shyun.dev', sameSite: 'lax', maxAge: 1000 * 60 * 60 * 24 * 3 }).json(foundUser.username + " logged in");
+        res.cookie('jwt', token, { httpOnly: true, secure: true, domain: 'https://shyun.dev', sameSite: 'none', maxAge: 1000 * 60 * 60 * 24 * 3 }).json(foundUser.username + " logged in");
     }
     else {
         res.sendStatus(401);
