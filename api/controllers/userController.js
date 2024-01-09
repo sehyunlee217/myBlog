@@ -31,7 +31,7 @@ const getUser = asyncHandler(async (req, res) => {
             process.env.TOKEN_SECRET,
         );
 
-        res.cookie('jwt', token, { httpOnly: true, secure: true, domain: 'https://shyun.dev', sameSite: 'lax' }).json(foundUser.username + "logged in");
+        res.cookie('jwt', token, { httpOnly: true, secure: true, domain: 'https://api.shyun.dev', sameSite: 'lax' }).json(foundUser.username + "logged in");
     }
     else {
         res.sendStatus(401);
