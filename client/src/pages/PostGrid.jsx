@@ -5,7 +5,7 @@ export default function Posts() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://myblog-api-bj63.onrender.com/post', {
+        fetch('https://api.shyun.dev/post', {
             method: 'GET',
             credentials: "include"
         }).then(

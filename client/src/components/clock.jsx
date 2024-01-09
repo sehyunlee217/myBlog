@@ -17,7 +17,7 @@ export default function Clock() {
     const time = useTime();
 
     return (
-        <div >Located in Toronto 🇨🇦 at {time.tz("America/Toronto").format("h:mm:ss A")}. Home belongs to Seoul 🇰🇷 at {time.tz("Asia/Seoul").format("MMM Do, h:mm:ss A")}  </div>
+        <div className="flex " >Located in Toronto 🇨🇦 at {time.tz("America/Toronto").format("h:mm:ss A")}. Home belongs to Seoul 🇰🇷 at {time.tz("Asia/Seoul").format("MMM Do, h:mm:ss A")}  </div>
     );
 }
 

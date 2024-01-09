@@ -6,7 +6,7 @@ function Register() {
 
     async function register(e) {
         e.preventDefault();
-        await fetch('https://myblog-api-bj63.onrender.com/auth/register', {
+        await fetch('https://api.shyun.dev/auth/register', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },

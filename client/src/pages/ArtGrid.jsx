@@ -5,7 +5,7 @@ export default function ArtGrid() {
     const [artposts, setArtPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://myblog-api-bj63.onrender.com/arts', {
+        fetch('https://api.shyun.dev/arts', {
             method: 'GET',
             credentials: "include"
         }).then(
