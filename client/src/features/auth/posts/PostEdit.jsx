@@ -36,7 +36,7 @@ export default function PostEdit() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://myblog-api-bj63.onrender.com/post/${ _id }`, {
+        fetch(`https://api.shyun.dev/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
