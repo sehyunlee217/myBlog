@@ -36,7 +36,7 @@ export default function PostEdit() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://api.shyun.dev/post/${ _id }`, {
+        fetch(`https://myblogapi-410916.ue.r.appspot.com/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
