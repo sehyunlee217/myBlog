@@ -10,7 +10,7 @@ export default function PostPage() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://api.shyun.dev/post/${ _id }`, {
+        fetch(`https://myblogapi-410916.ue.r.appspot.com/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -19,7 +19,7 @@ export default function PostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('https://api.shyun.dev/auth/login', {
+        fetch('https://myblogapi-410916.ue.r.appspot.com/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {
@@ -40,7 +40,7 @@ export default function PostPage() {
         <div className="flex items-center justify-center">
             {postData && (
                 <div>
-                    <img className=" h-96" src={'https://myblog-api-bj63.onrender.com/' + postData.filePath} />
+                    <img className="sm:h-fit h-96" src={'https://myblogapi-410916.ue.r.appspot.com/' + postData.filePath} />
                     <div className="flex justify-between items-center font-nunito">
                         <div className="text-4xl pt-3">{postData.title}</div>
                         {userInfo && (

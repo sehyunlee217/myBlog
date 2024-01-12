@@ -10,7 +10,7 @@ function Login() {
 
     async function login(e) {
         e.preventDefault();
-        const res = await fetch('https://api.shyun.dev/user/login', {
+        const res = await fetch('https://myblogapi-410916.ue.r.appspot.com/user/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },

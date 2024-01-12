@@ -6,7 +6,7 @@ function Register() {
 
     async function register(e) {
         e.preventDefault();
-        await fetch('https://api.shyun.dev/auth/register', {
+        await fetch('https://myblogapi-410916.ue.r.appspot.com/auth/register', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },

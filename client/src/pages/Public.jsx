@@ -11,7 +11,7 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://api.shyun.dev/post', {
+        fetch('https://myblogapi-410916.ue.r.appspot.com/post', {
             method: 'GET',
             credentials: "include"
         }).then(
@@ -64,7 +64,7 @@ export default function Home() {
                             </a>
                             <a href="./directory/yourfile.pdf" download="SeunghyunLee_Resume" className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500">
                                 <FaFilePdf size={25} />
-                                <span className="hidden sm:flex">Cover Letter</span>
+                                <span className="hidden sm:flex">Resume</span>
                             </a>
                             <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500" onClick={(e) => { window.location.href = 'mailto:leeseunghyun217@gmail.com'; }}>
                                 <MdOutlineEmail size={25} />

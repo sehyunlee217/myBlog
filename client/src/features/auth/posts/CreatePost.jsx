@@ -40,7 +40,7 @@ export default function CreatePost() {
         data.set("content", content);
         data.set("file", file[0]);
 
-        const res = await fetch("https://api.shyun.dev/auth/create/post", {
+        const res = await fetch("https://myblogapi-410916.ue.r.appspot.com/auth/create/post", {
             method: 'POST',
             credentials: "include",
             body: data
