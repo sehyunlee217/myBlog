@@ -11,7 +11,7 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://myblogapi-410916.ue.r.appspot.com//post', {
+        fetch('https://api.shyun.dev/post', {
             method: 'GET',
             credentials: "include"
         }).then(
