@@ -19,7 +19,7 @@ export default function PostPage() {
     }, []);
 
     useEffect(() => {
-        fetch('https://myblogapi-410916.ue.r.appspot.com/login', {
+        fetch('https://myblogapi-410916.ue.r.appspot.com/auth/login', {
             method: 'GET',
             credentials: "include"
         }).then(res => {
