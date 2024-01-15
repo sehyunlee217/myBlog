@@ -6,6 +6,7 @@ import { FaFilePdf } from "react-icons/fa";
 
 import Post from "../components/Post";
 import profilePic from "../img/profile.jpeg";
+import resume from "../files/resume.pdf";
 
 export default function Home() {
     const [posts, setPosts] = useState([]);
@@ -21,30 +22,30 @@ export default function Home() {
 
     return (
         <div id='public-container' className='flex justify-center'>
-            <div className="flex flex-col max-w-2xl w-full gap-5 sm:gap-10 md:gap-15">
+            <div className="flex flex-col max-w-2xl w-full gap-10 sm:gap-15 md:gap-20">
                 <div id="info-wrapper" className="flex flex-col gap-6">
-                    <div className="text-3xl font-bold font-nunito"><span className=" text-teal-400">Hi,</span> I'm Joe 👷‍♂️</div>
+                    <div className="text-6xl font-bold font-abril"><span className=" text-blue-950 dark:text-slate-50">Hi, I'm Joe</span> </div>
                     <div className="">
                         Industrial engineering student at the University of Toronto, studying <span className="font-bold">Operations Research</span>, <span className="font-bold">Data Science</span>, and <span className="font-bold">Human Factors</span>.
                     </div>
                     <div>
                         Learning about the web is one of my main priorities
                         although I am trying to explore different fields. I am eager to learn more about
-                        supply chain optimization and is currently working on building <Link className="underline hover:text-primary">projects</Link> and a <Link className="underline hover:text-primary">Godot game</Link> by next summer.
-                        My progress on these <Link className="underline hover:text-primary">projects</Link> can be found in the <Link to="/posts" className="underline">posts</Link> section.
+                        supply chain optimization and is currently working on building <Link to="/projects" className="underline font-bold">projects</Link> and a <Link className="underline font-bold">Godot game</Link> by next summer.
+                        My progress on these <Link to="/projects" className="underline font-bold">projects</Link> can be found in the <Link to="/posts" className="underline font-bold">posts</Link> section.
                     </div>
                     <div>
                         When I'm not working you can find me taking photos with my camera, doing some quick sketches, or going for long walks.
-                        My work can be found at the <Link to="/arts" className="underline">arts</Link> page.
+                        My work can be found at the <Link to="/arts" className="underline font-bold">arts</Link> page.
                     </div>
                 </div>
 
                 <div id="project-wrapper">
-                    <div className="text-2xl sm:text-3xl font-nunito font-extrabold text-teal-400">Projects</div>
+                    <div className="text-2xl sm:text-3xl font-abril font-extrabold text-blue-950 dark:text-slate-50">Projects</div>
                 </div>
 
-                <div id="project-wrapper">
-                    <div className="text-2xl sm:text-3xl font-nunito font-extrabold text-teal-400 pb-2">Contact</div>
+                <div id="contact-wrapper">
+                    <div className="text-2xl sm:text-3xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Contact</div>
                     <div className="font-nunito flex flex-wrap sm:flex-nowrap">
                         <div className="w-full">
                             <img className="w-full rounded-md shadow-xl" src={profilePic}></img>
@@ -62,7 +63,7 @@ export default function Home() {
                                 <BiBookContent size={25} />
                                 <span className="hidden sm:flex">read.cv</span>
                             </a>
-                            <a href="./directory/yourfile.pdf" download="SeunghyunLee_Resume" className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500">
+                            <a href={resume} download="Seunghyun(Joe)_Lee_CV.pdf" className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500">
                                 <FaFilePdf size={25} />
                                 <span className="hidden sm:flex">Resume</span>
                             </a>
@@ -76,7 +77,7 @@ export default function Home() {
                 </div>
 
                 <div id="skills-wrapper">
-                    <div className="font-extrabold text-2xl sm:text-3xl font-nunito text-teal-400 pb-2">Technical Skills</div>
+                    <div className="font-extrabold text-2xl sm:text-3xl font-abril text-blue-950 dark:text-slate-50 pb-2">Skills</div>
                     <div className="text-font_dark flex justify-between transition ease-in-out delay-300" >
                         <BiLogoJavascript className=" hover:text-korean_umber duration-700" size={50} />
                         <BiLogoPython className=" hover:text-korean_yellow duration-700" size={50} />
@@ -91,7 +92,7 @@ export default function Home() {
                 </div>
 
                 <div id="post-wrapper" className="flex flex-col justify-center">
-                    <div className="text-2xl sm:text-3xl font-nunito font-extrabold text-teal-400 pb-2">Posts</div>
+                    <div className="text-2xl sm:text-3xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Posts</div>
                     <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
                         {posts.length > 0 && posts.slice(0, 3).map(post =>
                             <Post

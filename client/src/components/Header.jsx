@@ -38,24 +38,24 @@ export default function Navbar() {
     }
 
     return (
-        <nav id="nav" className="flex justify-between text-gray-400  font-nunito font-bold p-4">
-            <div className=" text-teal-400 hover:text-orange-400 font-korean text-4xl">
+        <nav id="nav" className="flex justify-between font-nunito font-bold p-4">
+            <div className=" text-blue-950 dark:text-emp_dark hover:text-emp_dark dark:hover:text-orange-400  font-korean text-4xl">
                 <Link to="/">죠</Link>
             </div>
             <div className="flex gap-3 ">
-                <div className="hover:text-gray-800">
+                <div className="hover:text-emp_dark">
                     <Link to="/projects">projects</Link>
                 </div>
-                <div className="hover:text-gray-800">
+                <div className="hover:text-emp_dark">
                     <Link to="/posts">posts</Link>
                 </div>
-                <div className="hover:text-gray-800">
+                <div className="hover:text-emp_dark">
                     <Link to="/arts">arts</Link>
                 </div>
                 {
                     userInfo && (
                         <div className="flex gap-3">
-                            <div onClick={toggleBtn} className="hover:text-gray-800">
+                            <div onClick={toggleBtn} className="hover:text-emp_dark">
                                 <Link>create</Link>
                                 {
                                     createBtn && (
@@ -71,7 +71,7 @@ export default function Navbar() {
                     )
                 }
                 {!userInfo && (
-                    <div className="hover:text-gray-800">
+                    <div className="hover:text-emp_dark">
                         <Link to="/auth">login</Link>
                     </div>
                 )}

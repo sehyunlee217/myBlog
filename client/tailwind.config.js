@@ -19,13 +19,27 @@ export default {
         korean_blue: "#1583AF", // traditional blue / 전통 흑청색
         korean_lightblue: "#18B4E9", // traditional light blue / 전통 청벽색
         korean_yellow: "#F1A55A", // traditional yellow / 송화색
-        korean_yellowgreen: "#16AA52" // traditional yellowgreen / 명록색
+        korean_yellowgreen: "#16AA52", // traditional yellowgreen / 명록색
+
+        bg_light: "#EBE4D5",
+        font_light: "#B09777",
+        emp_light: "#403A37",
+
+        bg_dark: "#403A37",
+        font_dark: "#EBE4D5",
+        emp_dark: "#F0BD5E"
+
+
       },
       fontFamily: {
         "rounded": ['M+PLUS+Rounded+1c', 'sans-serif'],
         "nunito": ['Nunito', 'sans-serif'],
-        "korean": ['Do Hyeon', 'sans-serif']
+        "korean": ['Do Hyeon', 'sans-serif'],
+        "abril": ['Abril Fatface', 'sans-serif']
       },
+      keyframes: {
+
+      }
     },
     screens: {
       'sm': '640px',

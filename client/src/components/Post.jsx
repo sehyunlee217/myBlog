@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Post({ title, image, date, summary, _id }) {
 
     return (
-        <Link to={`/posts/${ _id }`} className="flex flex-col justify-between">
+        <Link to={`/posts/${ _id }`} className="flex flex-col justify-between pb-10">
             <img className="object-cover h-20 rounded-lg hover:opacity-80" src={'https://myblogapi-410916.ue.r.appspot.com/' + image} />
             <div className="flex flex-col gap-1">
                 <div className='flex justify-between align-middle'>
