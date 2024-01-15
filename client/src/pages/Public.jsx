@@ -51,23 +51,23 @@ export default function Home() {
                             <img className="w-full rounded-md shadow-xl" src={profilePic}></img>
                         </div>
                         <div className="flex w-full flex-row justify-between pt-3 sm:pt-0 sm:flex-col sm:pl-2 sm:justify-between sm:items-start">
-                            <a href="https://github.com/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-teal-500">
+                            <a href="https://github.com/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-emp_dark">
                                 <BiLogoGithub size={25} />
                                 <span className="hidden sm:flex">Github</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/joe-lee-0953a215a/" className="flex gap-4 justify-center items-center hover:text-teal-500">
+                            <a href="https://www.linkedin.com/in/joe-lee-0953a215a/" className="flex gap-4 justify-center items-center hover:text-emp_dark">
                                 <BiLogoLinkedinSquare size={25} />
                                 <span className="hidden sm:flex">Linked-In</span>
                             </a>
-                            <a href="https://read.cv/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-teal-500">
+                            <a href="https://read.cv/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-emp_dark">
                                 <BiBookContent size={25} />
                                 <span className="hidden sm:flex">read.cv</span>
                             </a>
-                            <a href={resume} download="Seunghyun(Joe)_Lee_CV.pdf" className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500">
+                            <a href={resume} download="Seunghyun(Joe)_Lee_CV.pdf" className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-emp_dark">
                                 <FaFilePdf size={25} />
                                 <span className="hidden sm:flex">Resume</span>
                             </a>
-                            <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-teal-500" onClick={(e) => { window.location.href = 'mailto:leeseunghyun217@gmail.com'; }}>
+                            <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-emp_dark" onClick={(e) => { window.location.href = 'mailto:leeseunghyun217@gmail.com'; }}>
                                 <MdOutlineEmail size={25} />
                                 <span className="hidden sm:flex">leeseunghyun217@gmail.com</span>
                             </a>
