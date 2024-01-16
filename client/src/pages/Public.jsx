@@ -22,9 +22,9 @@ export default function Home() {
 
     return (
         <div id='public-container' className='flex justify-center'>
-            <div className="flex flex-col max-w-2xl w-full gap-10 sm:gap-15 md:gap-20">
+            <div className="flex flex-col max-w-2xl w-full gap-16 sm:gap-20 md:gap-24">
                 <div id="info-wrapper" className="flex flex-col gap-6">
-                    <div className="text-6xl font-bold font-abril"><span className=" text-blue-950 dark:text-slate-50">Hi, I'm Joe</span> </div>
+                    <div className="text-6xl font-bold font-abril"><span className=" text-blue-950 dark:text-slate-50">Hi, I'm <span className=" text-korean_oak">Joe</span></span></div>
                     <div className="">
                         Industrial engineering student at the University of Toronto, studying <span className="font-bold">Operations Research</span>, <span className="font-bold">Data Science</span>, and <span className="font-bold">Human Factors</span>.
                     </div>
@@ -78,7 +78,7 @@ export default function Home() {
 
                 <div id="skills-wrapper">
                     <div className="font-extrabold text-2xl sm:text-3xl font-abril text-blue-950 dark:text-slate-50 pb-2">Skills</div>
-                    <div className="text-font_dark flex justify-between transition ease-in-out delay-300" >
+                    <div className=" text-primary_dark opacity-80 flex justify-between transition ease-in-out delay-300" >
                         <BiLogoJavascript className=" hover:text-korean_umber duration-700" size={50} />
                         <BiLogoPython className=" hover:text-korean_yellow duration-700" size={50} />
                         <BiLogoJava size={50} className=" hover:text-korean_orange duration-700" />

@@ -25,7 +25,7 @@ export default {
         font_light: "#B09777",
         emp_light: "#403A37",
 
-        bg_dark: "#403A37",
+        bg_dark: "#29262B",
         font_dark: "#EBE4D5",
         emp_dark: "#F0BD5E"
 
