@@ -8,8 +8,8 @@ function Post({ title, image, date, summary, _id }) {
             <img className="object-cover h-20 rounded-lg hover:opacity-80" src={'https://myblogapi-410916.ue.r.appspot.com/' + image} />
             <div className="flex flex-col gap-1">
                 <div className='flex justify-between align-middle'>
-                    <div className="text-2xl font-semibold font-abril text-gray-800">{title}</div>
-                    <div className="text-sm flex justify-center items-center text-gray-500">
+                    <div className="text-2xl font-abril text-gray-800 dark:text-slate-50">{title}</div>
+                    <div className="text-sm flex justify-center items-center text-gray-500 dark:text-slate-200">
                         {format(new Date(date), "MMM do - yyyy")}
                     </div>
                 </div>

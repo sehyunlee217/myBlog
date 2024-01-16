@@ -78,7 +78,7 @@ export default function Home() {
 
                 <div id="skills-wrapper">
                     <div className="font-extrabold text-3xl sm:text-4xl font-abril text-blue-950 dark:text-slate-50 pb-2">Skills</div>
-                    <div className=" text-primary_dark opacity-80 flex justify-between transition ease-in-out delay-300" >
+                    <div className="opacity-80 flex justify-between transition ease-in-out delay-300" >
                         <BiLogoJavascript className=" hover:text-korean_umber duration-700" size={50} />
                         <BiLogoPython className=" hover:text-korean_yellow duration-700" size={50} />
                         <BiLogoJava size={50} className=" hover:text-korean_orange duration-700" />
