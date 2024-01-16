@@ -22,7 +22,7 @@ export default function Home() {
 
     return (
         <div id='public-container' className='flex justify-center'>
-            <div className="flex flex-col max-w-2xl w-full gap-16 sm:gap-20 md:gap-24">
+            <div className="flex flex-col max-w-2xl w-full gap-12 sm:gap-16 ">
                 <div id="info-wrapper" className="flex flex-col gap-6">
                     <div className="text-6xl font-bold font-abril"><span className=" text-blue-950 dark:text-slate-50">Hi, I'm <span className=" text-korean_oak">Joe</span></span></div>
                     <div className="">
@@ -41,11 +41,11 @@ export default function Home() {
                 </div>
 
                 <div id="project-wrapper">
-                    <div className="text-2xl sm:text-3xl font-abril font-extrabold text-blue-950 dark:text-slate-50">Projects</div>
+                    <div className="text-3xl sm:text-4xl font-abril font-extrabold text-blue-950 dark:text-slate-50">Projects</div>
                 </div>
 
                 <div id="contact-wrapper">
-                    <div className="text-2xl sm:text-3xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Contact</div>
+                    <div className="text-3xl sm:text-4xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Contact</div>
                     <div className="font-nunito flex flex-wrap sm:flex-nowrap">
                         <div className="w-full">
                             <img className="w-full rounded-md shadow-xl" src={profilePic}></img>
@@ -77,7 +77,7 @@ export default function Home() {
                 </div>
 
                 <div id="skills-wrapper">
-                    <div className="font-extrabold text-2xl sm:text-3xl font-abril text-blue-950 dark:text-slate-50 pb-2">Skills</div>
+                    <div className="font-extrabold text-3xl sm:text-4xl font-abril text-blue-950 dark:text-slate-50 pb-2">Skills</div>
                     <div className=" text-primary_dark opacity-80 flex justify-between transition ease-in-out delay-300" >
                         <BiLogoJavascript className=" hover:text-korean_umber duration-700" size={50} />
                         <BiLogoPython className=" hover:text-korean_yellow duration-700" size={50} />
@@ -92,7 +92,7 @@ export default function Home() {
                 </div>
 
                 <div id="post-wrapper" className="flex flex-col justify-center">
-                    <div className="text-2xl sm:text-3xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Posts</div>
+                    <div className="text-3xl sm:text-4xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Posts</div>
                     <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
                         {posts.length > 0 && posts.slice(0, 3).map(post =>
                             <Post
