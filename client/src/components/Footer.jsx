@@ -3,7 +3,7 @@ import Clock from "./clock";
 
 function Footer() {
     return (
-        <div className=" font-abril bg-primary_dark bg-opacity-80 dark:bg-font_dark dark:text-bg_dark text-font_dark sticky top-full flex justify-center">
+        <div className=" border-t-2 border-opacity-50 border-korean_oak  font-abril py-1 text-bg_dark dark:text-font_dark sticky top-full flex justify-center">
             <Clock />
         </div>
     );

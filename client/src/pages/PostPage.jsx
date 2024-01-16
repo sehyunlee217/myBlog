@@ -37,7 +37,7 @@ export default function PostPage() {
     }, []);
 
     return (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center max-w-4xl">
             {postData && (
                 <div>
                     <img className="object-cover h-96" src={'https://myblogapi-410916.ue.r.appspot.com/' + postData.filePath} />

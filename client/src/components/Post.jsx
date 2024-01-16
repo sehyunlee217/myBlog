@@ -13,7 +13,7 @@ function Post({ title, image, date, summary, _id }) {
                         {format(new Date(date), "MMM do - yyyy")}
                     </div>
                 </div>
-                <div className='text-md'>{summary}</div>
+                <div className='text-md line-clamp-2'>{summary}</div>
             </div>
         </Link>
 

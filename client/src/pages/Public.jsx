@@ -31,11 +31,11 @@ export default function Home() {
                     <div>
                         Learning about the web is one of my main priorities
                         although I am trying to explore different fields. I am eager to learn more about
-                        supply chain optimization and is currently working on building <Link to="/projects" className="underline font-bold">projects</Link> and a <Link className="underline font-bold">Godot game</Link> by next summer.
+                        supply chain optimization and data analysis. I am currently working on <Link to="/projects" className="underline font-bold">projects</Link> alongside my courseload.
                         My progress on these <Link to="/projects" className="underline font-bold">projects</Link> can be found in the <Link to="/posts" className="underline font-bold">posts</Link> section.
                     </div>
                     <div>
-                        When I'm not working you can find me taking photos with my camera, doing some quick sketches, or going for long walks.
+                        When I'm not working, you can find me taking photos with my camera, drawing some quick sketches, or going for long walks.
                         My work can be found at the <Link to="/arts" className="underline font-bold">arts</Link> page.
                     </div>
                 </div>
@@ -92,7 +92,7 @@ export default function Home() {
                 </div>
 
                 <div id="post-wrapper" className="flex flex-col justify-center">
-                    <div className="text-3xl sm:text-4xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Posts</div>
+                    <div className=" text-3xl sm:text-4xl font-abril font-extrabold text-blue-950 dark:text-slate-50 pb-2">Posts</div>
                     <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
                         {posts.length > 0 && posts.slice(0, 3).map(post =>
                             <Post

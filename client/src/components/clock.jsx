@@ -17,14 +17,14 @@ export default function Clock() {
     const time = useTime();
 
     return (
-        <div className="flex flex-row gap-4 sm:gap-28">
+        <div className="flex flex-row gap-4 sm:gap-28 font-extralight">
             <div className="flex sm:gap-1">
                 <span className="hidden md:block">Located in</span>
-                <div>Toronto 🇨🇦 at {time.tz("America/Toronto").format("h:mm:ss A")}.</div>
+                <div>Toronto 🇨🇦 at {time.tz("America/Toronto").format("h:mm A")}.</div>
             </div>
             <div className="flex sm:gap-1">
                 <span className="hidden md:block">Home belongs to</span>
-                <div>Seoul 🇰🇷 at {time.tz("Asia/Seoul").format("h:mm:ss A")}.</div>
+                <div>Seoul 🇰🇷 at {time.tz("Asia/Seoul").format("h:mm A")}.</div>
             </div>
         </div>
     );
