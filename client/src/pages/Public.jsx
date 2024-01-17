@@ -12,8 +12,8 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3500/post', {
-            method: 'GET', // https://myblogapi-410916.ue.r.appspot.com
+        fetch('https://myblogapi-410916.ue.r.appspot.com/post', {
+            method: 'GET', // 
             credentials: "include"
         }).then(
             res => { res.json().then(posts => { setPosts(posts); }); }

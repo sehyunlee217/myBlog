@@ -13,7 +13,7 @@ const verifyJWT = require('./middleware/verifyJWT');
 
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads'));
-app.use(cors({ credentials: true, origin: 'http://localhost:5173' })); // https://shyun.dev/
+app.use(cors({ credentials: true, origin: 'https://shyun.dev/' })); // https://shyun.dev/
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
