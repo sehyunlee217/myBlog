@@ -12,8 +12,8 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://myblogapi-410916.ue.r.appspot.com/post', {
-            method: 'GET',
+        fetch('http://localhost:3500/post', {
+            method: 'GET', // https://myblogapi-410916.ue.r.appspot.com
             credentials: "include"
         }).then(
             res => { res.json().then(posts => { setPosts(posts); }); }
@@ -42,15 +42,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="project-wrapper">
-                    <div className="text-3xl sm:text-4xl font-abril font-bold text-gray-950 dark:text-slate-50 underline opacity-80">Projects</div>
-                </div>
-
                 <div id="contact-wrapper">
-                    <div className="text-3xl sm:text-4xl font-abril font-bold text-gray-950 dark:text-slate-50 pb-2 underline opacity-80">Contacts</div>
+                    <div className="text-3xl sm:text-4xl font-abril font-bold text-gray-950 dark:text-slate-50 pb-2 underline opacity-80">Contacts.</div>
                     <div className="font-nunito flex flex-wrap sm:flex-nowrap">
                         <div className="w-full">
-                            <img className="w-full rounded-md shadow-xl" src={profilePic}></img>
+                            <img className="w-full shadow-xl max-h-40 object-cover" src={profilePic}></img>
                         </div>
                         <div className="flex w-full flex-row justify-between pt-3 sm:pt-0 sm:flex-col sm:pl-2 sm:justify-between sm:items-start">
                             <a href="https://github.com/sehyunlee217" className="flex gap-4 justify-center items-center hover:text-emp_dark">
@@ -75,11 +71,10 @@ export default function Home() {
                             </a>
                         </div>
                     </div>
-
                 </div>
 
                 <div id="skills-wrapper">
-                    <div className="font-bold text-3xl sm:text-4xl font-abril text-gray-950 dark:text-slate-50 pb-2 underline opacity-80">Skills</div>
+                    <div className="font-bold text-3xl sm:text-4xl font-abril text-gray-950 dark:text-slate-50 pb-2 underline opacity-80">Skills.</div>
                     <div className="opacity-80 flex justify-between transition ease-in-out delay-300" >
                         <BiLogoJavascript className=" hover:text-korean_umber duration-700" size={50} />
                         <BiLogoPython className=" hover:text-korean_yellow duration-700" size={50} />
@@ -93,8 +88,18 @@ export default function Home() {
                     </div>
                 </div>
 
+
+                <div id="project-wrapper">
+                    <Link to="/projects" className=" cursor-pointer">
+                        <div className="text-3xl sm:text-4xl font-abril font-bold hover:text-korean_oak text-gray-950 dark:text-slate-50 underline opacity-80">Projects.</div>
+                    </Link>
+                </div>
+
                 <div id="post-wrapper" className="flex flex-col justify-center">
-                    <div className=" text-3xl sm:text-4xl font-abril font-bold text-gray-950 dark:text-slate-50 pb-2 underline opacity-80">Posts</div>
+                    <Link to="/projects" className=" cursor-pointer">
+                        <div className=" text-3xl sm:text-4xl font-abril font-bold text-gray-950 dark:text-slate-50 pb-2 underline opacity-80 hover:text-korean_oak">Posts.</div>
+                    </Link>
+
                     <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
                         {posts.length > 0 && posts.slice(0, 3).map(post =>
                             <Post
