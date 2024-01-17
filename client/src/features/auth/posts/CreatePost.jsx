@@ -2,7 +2,11 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import { Navigate } from "react-router-dom";
 import 'react-quill/dist/quill.snow.css';
+// import hljs from "highlight.js";
 
+// hljs.configure({
+//     languages: ['javascript', 'html', 'python', 'java', 'sql']
+// });
 const modules = {
     toolbar: [
         ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
@@ -22,6 +26,9 @@ const modules = {
 
         ['clean']                                         // remove formatting button
     ],
+    // syntax: {
+    //     highlight: text => hljs.highlightAuto(text).value,
+    // },
 };
 
 export default function CreatePost() {

@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 
 const Layout = () => {
     return (
-        <div className="h-full flex flex-col bg-gradient-to-br bg-slate-50 text-gray-700 dark:bg-neutral-800 dark:text-slate-50 antialiased">
+        <div className="h-full flex flex-col bg-gradient-to-br bg-slate-50 text-gray-700 dark:bg-bg_dark dark:text-white dark:text-opacity-70 antialiased">
             <Header />
-            <div className="font-rounded px-4 h-full">
+            <div className="font-sans px-4 h-full">
                 <Outlet />
             </div>
             <Footer />

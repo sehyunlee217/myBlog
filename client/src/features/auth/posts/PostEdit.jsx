@@ -96,7 +96,7 @@ export default function PostEdit() {
 
     return (
         <div className="flex justify-center h-full">
-            <form className="flex flex-col gap-2 w-[80%] border-2 p-4 h-full"
+            <form className="flex flex-col gap-2 w-[80%] border-2 p-4 h-full text-black"
                 onSubmit={updatePost}
                 encType="multipart/form-data">
                 <input className="border-2 px-2 py-1 text-xl"

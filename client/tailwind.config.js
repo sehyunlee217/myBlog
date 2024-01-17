@@ -25,17 +25,15 @@ export default {
         font_light: "#B09777",
         emp_light: "#403A37",
 
-        bg_dark: "#29262B",
+        bg_dark: "#212121",
         font_dark: "#EBE4D5",
         emp_dark: "#F0BD5E"
-
-
       },
       fontFamily: {
         "rounded": ['M+PLUS+Rounded+1c', 'sans-serif'],
         "nunito": ['Nunito', 'sans-serif'],
         "korean": ['Do Hyeon', 'sans-serif'],
-        "abril": ['Abril Fatface', 'sans-serif']
+        "default": ['Abril Fatface', 'sans-serif']
       },
       keyframes: {
 
