@@ -96,7 +96,7 @@ export default function Home() {
                 </div>
 
                 <div id="post-wrapper" className="flex flex-col justify-center">
-                    <Link to="/projects" className=" cursor-pointer">
+                    <Link to="/posts" className=" cursor-pointer">
                         <div className=" text-3xl sm:text-4xl font-abril font-bold text-gray-950 dark:text-slate-50 pb-2 underline opacity-80 hover:text-korean_oak">Posts.</div>
                     </Link>
 
