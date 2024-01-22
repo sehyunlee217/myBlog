@@ -40,7 +40,7 @@ export default function PostPage() {
         <div className="flex items-center justify-center max-w-4xl">
             {postData && (
                 <div>
-                    <img className="object-cover h-96" src={'https://myblogapi-410916.ue.r.appspot.com/' + postData.filePath} />
+                    <img className="object-cover h-96" src={'https://api.shyun.dev/' + postData.filePath} />
                     <div className="flex justify-between items-center font-nunito">
                         <div className="text-4xl pt-3">{postData.title}</div>
                         {userInfo && (

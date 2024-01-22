@@ -39,7 +39,7 @@ export default function CreateArtPost() {
         data.set("summary", summary);
         data.set("file", file[0]);
 
-        const res = await fetch("https://myblogapi-410916.ue.r.appspot.com/auth/create/art", {
+        const res = await fetch("https://api.shyun.dev/auth/create/art", {
             method: 'POST',
             credentials: "include",
             body: data

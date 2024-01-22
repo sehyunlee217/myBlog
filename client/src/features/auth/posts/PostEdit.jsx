@@ -36,7 +36,7 @@ export default function PostEdit() {
     const { _id } = useParams();
 
     useEffect(() => {
-        fetch(`https://myblogapi-410916.ue.r.appspot.com/post/${ _id }`, {
+        fetch(`https://api.shyun.dev/post/${ _id }`, {
             method: 'GET',
             credentials: 'include'
         }).then(
@@ -58,7 +58,7 @@ export default function PostEdit() {
         data.set("summary", summary);
         data.set("content", content);
 
-        const res = await fetch(`https://myblogapi-410916.ue.r.appspot.com/auth/post/${ _id }`, {
+        const res = await fetch(`https://api.shyun.dev/auth/post/${ _id }`, {
             method: 'PUT',
             credentials: "include",
             body: data
@@ -76,7 +76,7 @@ export default function PostEdit() {
         e.preventDefault();
         const data = new FormData();
 
-        const res = await fetch(`https://myblogapi-410916.ue.r.appspot.com/auth/post/${ _id }`, {
+        const res = await fetch(`https://api.shyun.dev/auth/post/${ _id }`, {
             method: 'DELETE',
             credentials: "include",
             body: data

@@ -65,9 +65,9 @@ export default function Home() {
                                 <FaFilePdf size={25} />
                                 <span className="hidden sm:flex">Resume</span>
                             </a>
-                            <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-emp_dark" onClick={(e) => { window.location.href = 'mailto:leeseunghyun217@gmail.com'; }}>
+                            <a className="hover:cursor-pointer flex gap-4 justify-center items-center hover:text-emp_dark" onClick={(e) => { window.location.href = 'mailto:sehyun.lee@mail.utoronto.ca'; }}>
                                 <MdOutlineEmail size={25} />
-                                <span className="hidden sm:flex">leeseunghyun217@gmail.com</span>
+                                <span className="hidden sm:flex">sehyun.lee@mail.utoronto.ca</span>
                             </a>
                         </div>
                     </div>
