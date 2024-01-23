@@ -5,15 +5,17 @@ import { BiLogoGithub } from "react-icons/bi";
 function Project({ title, image, date, summary, linkto, github, _id }) {
 
     return (
-        <div className="flex flex-col justify-between pb-10 bg-opacity-60 pt-4">
-            <a href={linkto} className='cursor-pointer h-24 hover:opacity-80'>
-                <img className="object-cover" src={'https://api.shyun.dev/' + image} />
-            </a>
+        <div className="flex flex-col gap-2 justify-between pb-10 bg-opacity-60 pt-4">
+            <div>
+                <a href={linkto} className='cursor-pointer h-24 hover:opacity-80'>
+                    <img src={'https://api.shyun.dev/' + image} />
+                </a>
+            </div>
             <div className="flex flex-col gap-1">
                 <div className='flex justify-between align-middle'>
                     <div className="text-2xl font-abril py-2 font-bold">{title}</div>
-                    <a href={github} className="cursor-pointer hover:text-korean_oak">
-                        <BiLogoGithub size={20} />
+                    <a href={github} className="cursor-pointer flex items-center hover:text-korean_oak">
+                        <BiLogoGithub size={30} />
                     </a>
                 </div>
                 <div className='text-md line-clamp-2'>{summary}</div>
