@@ -42,7 +42,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div>
-                        Learning about the web is one of my main priorities
+                        Driven by curiosity,
                         although I am trying to explore different fields. I am eager to learn more about
                         supply chain optimization and data analysis. I am currently working on <Link to="/projects" className="underline font-bold">projects</Link> alongside my courseload.
                         My progress on these <Link to="/projects" className="underline font-bold">projects</Link> can be found in the <Link to="/posts" className="underline font-bold">posts</Link> section.
@@ -58,7 +58,7 @@ export default function Home() {
                         <div className="text-3xl sm:text-4xl font-abril font-bold hover:text-korean_oak text-gray-950 dark:text-slate-50 underline opacity-80">Projects</div>
                     </Link>
 
-                    <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
+                    <div className="grid grid-cols-1 max-w-lg w-full gap-6">
                         {projects.length > 0 && projects.slice(0, 3).map(project =>
                             <Project
                                 key={project._id}
@@ -127,7 +127,7 @@ export default function Home() {
                         <div className=" text-3xl sm:text-4xl font-abril font-bold text-gray-950 dark:text-slate-50 pb-2 underline opacity-80 hover:text-korean_oak">Posts</div>
                     </Link>
 
-                    <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
+                    <div className="grid grid-cols-1 max-w-lg w-full pb-5 gap-6">
                         {posts.length > 0 && posts.slice(0, 3).map(post =>
                             <Post
                                 key={post._id}

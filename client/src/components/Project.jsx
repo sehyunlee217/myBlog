@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { BiLogoGithub } from "react-icons/bi";
+import { BiLogoGithub, BiLinkExternal } from "react-icons/bi";
 
 
 function Project({ title, image, date, summary, linkto, github, _id }) {
@@ -14,11 +14,17 @@ function Project({ title, image, date, summary, linkto, github, _id }) {
             <div className="flex flex-col gap-1">
                 <div className='flex justify-between align-middle'>
                     <div className="text-2xl font-abril py-2 font-bold">{title}</div>
-                    <a href={github} className="cursor-pointer flex items-center hover:text-korean_oak">
-                        <BiLogoGithub size={30} />
-                    </a>
+                    <div>
+                        <a href={linkto} className="cursor-pointer flex items-center hover:text-korean_oak">
+                            <BiLinkExternal size={30} />
+                        </a>
+                        <a href={github} className="cursor-pointer flex items-center hover:text-korean_oak">
+                            <BiLogoGithub size={30} />
+                        </a>
+                    </div>
+
                 </div>
-                <div className='text-md line-clamp-2'>{summary}</div>
+                <div className='text-md line-clamp-4'>{summary}</div>
                 <div className="text-base flex justify-center items-center text-gray-500 dark:text-gray-200">
                     {format(new Date(date), "MMM do, yyyy")}
                 </div>
