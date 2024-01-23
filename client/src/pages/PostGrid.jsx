@@ -28,6 +28,5 @@ export default function Posts() {
                 )}
             </div>
         </div>
-
     );
 }

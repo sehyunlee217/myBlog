@@ -13,6 +13,7 @@ import Register from './features/auth/auth/Register';
 
 import CreatePost from './features/auth/posts/CreatePost';
 import CreateArtPost from './features/auth/arts/CreateArt';
+import CreateProject from './features/auth/projects/CreateProject';
 
 import PostEdit from './features/auth/posts/PostEdit';
 import ArtEdit from './features/auth/arts/ArtEdit';
@@ -51,6 +52,7 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="create/post" element={<CreatePost />} />
             <Route path="create/art" element={<CreateArtPost />} />
+            <Route path="create/project" element={<CreateProject />} />
           </Route>
 
         </Route>{/*end of public*/}
