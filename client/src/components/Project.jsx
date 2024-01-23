@@ -13,12 +13,14 @@ function Project({ title, image, date, summary, linkto, github, _id }) {
             </div>
             <div className="flex flex-col gap-1">
                 <div className='flex justify-between align-middle'>
-                    <div className="text-2xl font-abril py-2 font-bold">{title}</div>
+                    <a href={linkto} className="cursor-pointer">
+                        <div className="text-2xl font-abril py-2 font-bold">{title}</div>
+                    </a>
                     <div className='flex gap-2'>
                         <a href={linkto} className="cursor-pointer flex items-center hover:text-korean_oak">
                             <BiLinkExternal size={30} />
                         </a>
-                        <a href={github} className="cursor-pointer flex items-center hover:text-korean_oak">
+                        <a href={github} className="cursor-pointer flex items-center hover:text-emp_dark">
                             <BiLogoGithub size={30} />
                         </a>
                     </div>

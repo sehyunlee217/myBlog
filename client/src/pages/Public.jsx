@@ -42,13 +42,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div>
-                        Driven by curiosity,
-                        although I am trying to explore different fields. I am eager to learn more about
+                        Driven by curiosity, passionate about the arts, exploring different fields. I am eager to learn more about
                         supply chain optimization and data analysis. I am currently working on <Link to="/projects" className="underline font-bold">projects</Link> alongside my courseload.
                         My progress on these <Link to="/projects" className="underline font-bold">projects</Link> can be found in the <Link to="/posts" className="underline font-bold">posts</Link> section.
                     </div>
                     <div>
-                        When I'm not working, you can find me taking photos with my camera, drawing some quick sketches, or going for long walks.
+                        When I'm not working, you can find me taking photos with my camera, drawing some quick sketches, or going for long walks to the park.
                         My work can be found at the <Link to="/arts" className="underline font-bold">arts</Link> page.
                     </div>
                 </div>
