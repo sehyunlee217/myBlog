@@ -17,8 +17,8 @@ const createProject = asyncHandler(async (req, res) => {
 
     filePath = filePath + "." + extension;
 
-    // create and save new post
-    const newProject = await Post.create({ title, summary, github, linkto, filePath });
+    // create and save new project
+    const newProject = await Project.create({ title, summary, github, linkto, filePath });
 
     if (newProject) {
         return res.status(201).json({ message: "New Project created!" });
@@ -32,7 +32,7 @@ const createProject = asyncHandler(async (req, res) => {
 const getAllProjects = asyncHandler(async (req, res) => {
     const projects = await Project.find().lean().sort({ createdAt: -1 });
 
-    // if there are no posts
+    // if there are no projects
     if (!projects?.length) {
         return res.status(400).json({ message: "No projects available" });
     }
