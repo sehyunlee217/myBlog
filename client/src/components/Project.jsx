@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import { Link } from "react-router-dom";
 
-function Post({ title, image, date, summary, _id }) {
+function Project({ title, image, date, summary, _id }) {
 
     return (
         <Link to={`/posts/${ _id }`} className="flex flex-col justify-between pb-10 bg-opacity-60 pt-4">
@@ -20,4 +20,4 @@ function Post({ title, image, date, summary, _id }) {
     );
 }
 
-export default Post;
+export default Project;

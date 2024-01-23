@@ -25,6 +25,8 @@ connectDB();
 app.use("/user", require("./routes/userRoutes"));
 app.use("/post", require("./routes/postRoutes"));
 app.use("/arts", require("./routes/artRoutes"));
+app.use("/projects", require("./routes/projectRoutes"));
+
 
 app.use(verifyJWT); // middleware to verify JWT token for auth routes
 
