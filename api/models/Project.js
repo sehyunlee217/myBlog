@@ -12,7 +12,7 @@ const projectSchema = new mongoose.Schema({
     timestamps: true
 });
 
-postSchema.plugin(AutoIncrement, {
+projectSchema.plugin(AutoIncrement, {
     inc_field: 'post',
     id: 'projNum',
     start_seq: 1
