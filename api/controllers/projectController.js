@@ -3,10 +3,10 @@ const asyncHandler = require('express-async-handler');
 const fs = require('fs');
 
 const createProject = asyncHandler(async (req, res) => {
-    const { title, summary, github, linkto, file } = req.body;
+    const { title, summary, github, linkto } = req.body;
 
     // confirm data 
-    if (!req.body.title || !req.body.summary || !req.body.github || !req.body.linkto || !req.body.file) {
+    if (!req.body.title || !req.body.summary || !req.body.github || !req.body.linkto) {
         return res.status(400).json({ message: "All fields are required!" });
     }
 
