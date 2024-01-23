@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import Project from "../components/Project";
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
@@ -16,12 +18,14 @@ export default function Projects() {
             <div className="grid grid-cols-1 max-w-lg w-full">
                 {projects.length > 0 && projects.map(project =>
                     <Project
-                        key={post._id}
-                        title={post.title}
-                        image={post.filePath}
-                        date={post.date}
-                        summary={post.summary}
-                        _id={post._id}
+                        key={project._id}
+                        title={project.title}
+                        image={project.filePath}
+                        date={project.date}
+                        summary={project.summary}
+                        linkto={project.linkto}
+                        github={project.github}
+                        _id={project._id}
                     />
                 )}
             </div>
