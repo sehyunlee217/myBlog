@@ -17,7 +17,7 @@ export default function Clock() {
     const time = useTime();
 
     return (
-        <div className="flex flex-row gap-32 sm:gap-36">
+        <div className="flex flex-row gap-10 sm:gap-36">
             <div className="flex sm:gap-1">
                 <span className="hidden md:block">Located in</span>
                 <div>Toronto 🇨🇦 at {time.tz("America/Toronto").format("h:mm A")}.</div>
