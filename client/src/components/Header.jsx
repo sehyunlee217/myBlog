@@ -62,7 +62,7 @@ export default function Navbar() {
                                         <div className="flex flex-col absolute">
                                             <Link to="auth/create/post">posts</Link>
                                             <Link to="auth/create/art">art</Link>
-                                            <Link to="auth/create/project">art</Link>
+                                            <Link to="auth/create/project">project</Link>
                                         </div>
                                     )
                                 }

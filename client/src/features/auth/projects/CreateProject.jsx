@@ -34,9 +34,9 @@ export default function CreateProject() {
         setprojectComplete(true);
     }
 
-    if (projectComplete) {
-        return <Navigate to={'/projects'} />;
-    }
+    // if (projectComplete) {
+    //     return <Navigate to={'/projects'} />;
+    // }
 
     return (
         <div className="flex justify-center h-full">
