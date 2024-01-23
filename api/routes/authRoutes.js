@@ -6,6 +6,7 @@ const upload = multer({ dest: 'uploads/' });
 const userController = require("../controllers/userController");
 const postController = require("../controllers/postController");
 const artController = require("../controllers/artController");
+const projectController = require("../controllers/projectController");
 
 /* user controller that requires JWT auth */
 
@@ -36,4 +37,10 @@ router.route('/arts/:id')
     .put(upload.single('file'), artController.updateArtPost)
     .delete(artController.deleteArtPost);
 
+/* project controller that requires JWT auth */
+
+router.route('/create/project')
+    .post(upload.single('file'), projectController.createProject);
+
 module.exports = router;
+

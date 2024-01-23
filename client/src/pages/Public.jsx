@@ -20,6 +20,15 @@ export default function Home() {
         );
     }, []);
 
+    useEffect(() => {
+        fetch('https://api.shyun.dev/post', {
+            method: 'GET', // 
+            credentials: "include"
+        }).then(
+            res => { res.json().then(posts => { setPosts(posts); }); }
+        );
+    }, []);
+
     return (
         <div id='public-container' className='flex justify-center'>
             <div className="flex flex-col max-w-2xl w-full gap-12 sm:gap-16 ">
@@ -93,6 +102,20 @@ export default function Home() {
                     <Link to="/projects" className=" cursor-pointer">
                         <div className="text-3xl sm:text-4xl font-abril font-bold hover:text-korean_oak text-gray-950 dark:text-slate-50 underline opacity-80">Projects.</div>
                     </Link>
+
+                    <div className="grid grid-cols-1 max-w-lg w-full pb-20 gap-6">
+                        {posts.length > 0 && posts.slice(0, 3).map(post =>
+                            <Post
+                                key={post._id}
+                                title={post.title}
+                                image={post.filePath}
+                                date={post.date}
+                                summary={post.summary}
+                                _id={post._id}
+                            />
+                        )}
+                    </div>
+
                 </div>
 
                 <div id="post-wrapper" className="flex flex-col justify-center">

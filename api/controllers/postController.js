@@ -27,8 +27,6 @@ const createNewPost = asyncHandler(async (req, res) => {
 
     const { title, summary, content } = req.body;
 
-    console.log("Post Create request");
-
     // confirm data 
     if (!req.body.title || !req.body.summary || !req.body.content) {
         return res.status(400).json({ message: "All fields are required!" });
