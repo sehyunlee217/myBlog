@@ -39,10 +39,10 @@ export default function Navbar() {
 
     return (
         <nav id="nav" className="flex justify-between font-bold p-4">
-            <div className=" text-blue-950 dark:text-korean_oak hover:text-emp_dark dark:hover:text-emp_dark font-korean text-4xl">
+            <div className=" border-2 px-1 pt-[2px] rounded-md border-emp_dark shadow-lg text-blue-950 dark:text-korean_oak hover:text-emp_dark font-korean text-4xl">
                 <Link to="/">죠</Link>
             </div>
-            <div className="flex gap-3 font-light font-abril text-blue-950 dark:text-slate-50 items-center">
+            <div className="flex font-bold gap-3 font-abril text-blue-950 dark:text-slate-50 items-center">
                 <div className="hover:text-emp_dark">
                     <Link to="/projects">projects</Link>
                 </div>

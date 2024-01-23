@@ -25,7 +25,7 @@ export default function Home() {
             <div className="flex flex-col max-w-2xl w-full gap-12 sm:gap-16 ">
                 <div id="info-wrapper" className="flex flex-col gap-6">
                     <div className="flex flex-col justify-center items-center gap-8 sm:flex-row tracking-tighter ">
-                        <div className="text-6xl font-bold font-abril "><span className=" text-gray-950 dark:text-slate-50"> <span className="text-korean_oak sm:text-9xl">Joe.</span></span></div>
+                        <div className="text-7xl font-bold font-abril sticky top-14 mix-blend-difference "><span className="text-korean_oak sm:text-9xl font-extrabold shadow-2xl">Joe.</span></div>
                         <div className="">
                             Industrial engineering student at the University of Toronto, studying <span className="font-bold">Operations Research</span>, <span className="font-bold">Data Science</span>, and <span className="font-bold">Human Factors</span>.
                         </div>
