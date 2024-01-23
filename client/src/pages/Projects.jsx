@@ -14,7 +14,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-10 mb-10">
             <div className="grid grid-cols-1 max-w-lg w-full">
                 {projects.length > 0 && projects.map(project =>
                     <Project
