@@ -37,7 +37,7 @@ export default function PostPage() {
     }, []);
 
     return (
-        <div className="flex items-center justify-center max-w-4xl">
+        <div className="flex items-center justify-center max-w-4xl pb-10 mb-10">
             {postData && (
                 <div>
                     <img className="object-cover h-96" src={'https://api.shyun.dev/' + postData.filePath} />

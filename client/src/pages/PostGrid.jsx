@@ -15,7 +15,7 @@ export default function Posts() {
 
     return (
         <div className="flex justify-center">
-            <div className="grid grid-cols-1 max-w-lg w-full">
+            <div className="grid grid-cols-1 max-w-lg w-full pb-10 mb-10">
                 {posts.length > 0 && posts.map(post =>
                     <Post
                         key={post._id}
