@@ -43,7 +43,7 @@ export default function Home() {
                     </div>
                     <div>
                         Driven by curiosity, passionate about the arts, exploring different fields. I am eager to learn more about
-                        supply chain optimization and data analysis. I am currently working on <Link to="/projects" className="underline font-bold">projects</Link> alongside my courseload.
+                        data analysis, supply chain optimization, and web development. I am currently working on <Link to="/projects" className="underline font-bold">projects</Link> alongside my courseload.
                         My progress on these <Link to="/projects" className="underline font-bold">projects</Link> can be found in the <Link to="/posts" className="underline font-bold">posts</Link> section.
                     </div>
                     <div>
